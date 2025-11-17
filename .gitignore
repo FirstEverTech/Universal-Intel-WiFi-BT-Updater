@@ -1,0 +1,36 @@
+# System plików Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+Icon?
+.DS_Store
+
+# PowerShell
+*.ps1xml
+*.psc1
+*.psd1
+*.psm1
+
+# Pliki wykonywalne / instalatory
+*.exe
+
+# Logi i tymczasowe
+*.log
+*.tmp
+*.bak
+*.swp
+*.old
+
+# IDE / edytory
+.vscode/
+*.code-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Node / npm (jeśli kiedykolwiek dodasz frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
