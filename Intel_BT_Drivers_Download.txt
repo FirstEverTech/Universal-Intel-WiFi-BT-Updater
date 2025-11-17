@@ -1,0 +1,31 @@
+Intel Wireless Bluetooth
+DriverVer = 09/23/2025,24.0.1.1
+USB\VID_8087&PID_0029&REV_0000
+USB\VID_8087&PID_0029&REV_0001
+http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/0c755626-c258-4c0a-8d94-aa439c86cb8c_1648d388e880f326f0e20a6ba3631bdfee2f3ccc.cab
+USB\VID_8087&PID_0AAA&REV_0000
+USB\VID_8087&PID_0AAA&REV_0001
+USB\VID_8087&PID_0AAA&REV_0002
+http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/1cfb3eec-484f-4394-b0e1-905bda7a5681_410826e8916cb4c13d112f32e80ae5edd9ba9278.cab
+USB\VID_8087&PID_0026&REV_0000
+USB\VID_8087&PID_0026&REV_0001
+USB\VID_8087&PID_0026&REV_0002
+http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/3d24840f-706b-46cd-afb4-85409fc4360d_ca1660c4349e7b9803203d99b96da93e45f64d3e.cab
+USB\VID_8087&PID_0037&REV_0000
+USB\VID_8087&PID_0037&REV_0001
+http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/6a09e8da-5d58-4e61-a21e-bb1dbefc0df5_ad159c66153443d29cbd7b6ebd214973b6c23f9f.cab
+USB\VID_8087&PID_0032&REV_0000
+USB\VID_8087&PID_0032&REV_0001
+http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/8dfe7d73-3145-4651-a8b5-bbeca107057d_a2b3e040e958e7971dee425eabca6acc7962f65a.cab
+USB\VID_8087&PID_0033&REV_0000
+USB\VID_8087&PID_0033&REV_0001
+http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/17a8c0fd-46e5-4889-ad51-d6e47174d7b7_15459acff52ae543f5c40e920a9360b560780fd8.cab
+USB\VID_8087&PID_0038&REV_0000
+USB\VID_8087&PID_0038&REV_0001
+http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/a9e3e903-97ef-4197-88f9-ca3f4d99ef7d_e104e49b84db5d00b46994004e1f814ba4761f08.cab
+USB\VID_8087&PID_0025&REV_0001
+USB\VID_8087&PID_0025&REV_0002
+http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/c4c50887-d812-459c-bd83-68ceac1a3d7c_7f9ce220316f88cd7aea63ec21a993452a2f6359.cab
+USB\VID_8087&PID_0036&REV_0000
+USB\VID_8087&PID_0036&REV_0001
+http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/caa05981-7731-43c1-a48e-7229853d4b7f_4c7ecd2b84e298282f1b2569fa67281d4f45e4e7.cab
