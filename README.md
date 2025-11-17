@@ -1,137 +1,136 @@
-# Universal Intel Chipset Updater 🚀
+# Universal Intel Wi-Fi and Bluetooth Driver Updater 🚀
 
-[![GitHub release](https://img.shields.io/github/v/release/FirstEverTech/Universal-Intel-Chipset-Updater)](https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/releases)
-[![GitHub license](https://img.shields.io/github/license/FirstEverTech/Universal-Intel-Chipset-Updater)](https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/FirstEverTech/Universal-Intel-Chipset-Updater)](https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/issues)
+[![GitHub release](https://img.shields.io/github/v/release/FirstEverTech/Universal-Intel-WiFi-BT-Updater)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases)
+[![GitHub license](https://img.shields.io/github/license/FirstEverTech/Universal-Intel-WiFi-BT-Updater)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/LICENSE)
 [![Windows](https://img.shields.io/badge/Windows-10%2B-blue)](https://www.microsoft.com/windows)
-[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F98-green)](https://www.virustotal.com/gui/url/8b9bef806321359355f6c0a12709d84d21acb600964a5ec8bd53cf9422b1cd04?nocache=1)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F98-green)](https://www.virustotal.com/gui/url/d510a622186b403f9c328c6db36f846cd09be3ac193b6c1bfb4a4720b251bac5/detection)
 
-Automated tool to detect and update Intel chipset drivers to the latest versions. Supports all Intel platforms from Sandy Bridge (2nd Gen) to the latest Panther Lake (15th Gen).
+Automated tool to download and install the latest Intel Wi-Fi and Bluetooth drivers directly from Windows Update servers.
 
 ## ✨ Features
 
-- 🔍 **Automatic Hardware Detection** - Identifies your Intel chipset and finds matching drivers using the comprehensive HW_ID database
-- 📦 **Latest Drivers** - Always downloads the most recent official Intel chipset drivers
-- 🛡️ **Safe Installation** - Uses official Intel installers with proper parameters
-- 🔄 **Smart Updates** - Provides updates to the latest driver versions or reinstalls the current one
-- 💻 **Broad Compatibility** - Supports desktop, mobile, workstation, server, and embedded platforms
-- ⚡ **Easy to Use** - Simple batch file execution with automatic administrator elevation
-- 📊 **Comprehensive Database** - Based on analysis of 88 official Intel installer versions with 82,663 driver version comparisons
+- 🔍 **Automatic Detection** - Identifies Intel Wi-Fi and Bluetooth adapters
+- 📊 **Version Comparison** - Checks current driver versions vs latest available
+- ⬇️ **Direct Download** - Downloads drivers from official Windows Update servers
+- 🛡️ **Safe Installation** - Uses Windows pnputil for reliable driver installation
+- 🧹 **Clean Operation** - Automatically cleans temporary files
+- 🔧 **Debug Mode** - Includes debug version for troubleshooting
+- ⚡ **Force Reinstall** - Option to force reinstall drivers even if versions match
+- 🔄 **Aggressive Method** - Uses disable/enable + pnputil for reliable updates
 
-## 📋 Supported Platforms
+## 📋 Supported Devices
 
-| 🖥️ Mainstream Desktop | ⚡ Workstation/Enthusiast | 🔋 Atom/Embedded & Low-Power |
-| :--- | :--- | :--- |
-| **15th Gen**: Panther Lake<br>**14th Gen**: Arrow Lake, Raptor Lake Refresh<br>**13th Gen**: Raptor Lake<br>**12th Gen**: Alder Lake<br>**11th Gen**: Rocket Lake<br>**10th Gen**: Comet Lake, Cannon Lake<br>**9th/8th Gen**: Coffee Lake<br>**7th Gen**: Kaby Lake<br>**6th Gen**: Skylake<br>**5th Gen**: Broadwell<br>**4th Gen**: Haswell<br>**3rd Gen**: Ivy Bridge<br>**2nd Gen**: Sandy Bridge | **Xeon W-2400/W-3400**: Sapphire Rapids<br>**Xeon W-3300**: Ice Lake-X<br>**X299**: Cascade Lake-X, Skylake-X<br>**X99**: Broadwell-E, Haswell-E<br>**X79**: Ivy Bridge-E, Sandy Bridge-E | **Core Ultra 200V**: Lunar Lake<br>**N-series**: Alder Lake-N<br>**Atom**: Jasper Lake, Elkhart Lake, Gemini Lake, Apollo Lake<br>**Atom Server**: Denverton, Avoton<br>**Legacy Atom**: Bay Trail, Braswell, Valleyview |
-| 💻 **Mainstream Mobile** | 🗄️ **Server Platforms** | 🕰️ **Legacy Chipsets** |
-| **Core Ultra 200V**: Lunar Lake<br>**14th Gen**: Meteor Lake<br>**11th Gen**: Tiger Lake<br>**10th Gen**: Ice Lake, Comet Lake<br>**8th/9th Gen**: Coffee Lake<br>**7th Gen**: Kaby Lake<br>**6th Gen**: Skylake<br>**5th Gen**: Broadwell<br>**4th Gen**: Haswell, Crystal Well<br>**3rd Gen**: Ivy Bridge<br>**2nd Gen**: Sandy Bridge | **6th Gen Xeon**: Granite Rapids, Clearwater Forest<br>**5th Gen Xeon**: Emerald Rapids<br>**4th Gen Xeon**: Sapphire Rapids<br>**3rd Gen Xeon**: Ice Lake-SP<br>**2nd Gen Xeon**: Cascade Lake<br>**1st Gen Xeon**: Skylake-SP<br>**Older Xeon**: Broadwell-EP, Haswell-EP, Ivy Town, Sandy Bridge-EP | **100 Series**: Sunrise Point<br>**9 Series**: Wildcat Point<br>**8 Series**: Lynx Point<br>**7 Series**: Panther Point<br>**6 Series**: Cougar Point |
+### 📡 Wi-Fi Adapters
+- **Wi-Fi 7**: BE201, BE202, BE200
+- **Wi-Fi 6E**: AX411 (Gig+), AX211 (Gig+), AX210 (Gig+)
+- **Wi-Fi 6**: AX203, AX200 (Gig+), AX201 (Gig+), AX101, Desktop Kit
+- **Wi-Fi 5**: AC 9560, AC 9462, AC 9461, AC 9260
+- **Legacy**: All other Intel wireless adapters
 
-*For complete HW_ID mapping and specific device support, check the [Hardware Compatibility Database](https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/blob/main/Intel_Chipset_Drivers_Latest.md)*
+### 📱 Bluetooth Adapters
+- **Intel Bluetooth USB** (VID_8087): 0025, 0026, 0029, 0032, 0033, 0036, 0037, 0038, 0AAA
+- **Intel Bluetooth PCI** devices
+- **Intel Bluetooth UART** devices  
+- **Intel Killer Bluetooth** adapters
 
 ## 🛠️ Usage
 
 ### Option 1: SFX EXE (Recommended)
 1. Download the self-extracting executable:  
-   `ChipsetUpdater-10.1-2025.11-Driver64-Win10-Win11.exe` from the repository
+   `WiFi-BT-24.0-2025.11-Driver64-Win10-Win11.exe` from the repository
 2. Run the EXE as Administrator
 3. Follow the on-screen prompts to scan and update your drivers
 
 ### Option 2: Simple Batch File
-1. Download both `Universal-Intel-Chipset-Updater.bat` and `Universal-Intel-Chipset-Updater.ps1`
+1. Download both `Universal-Intel-WiFi-BT-Updater.bat` and `Universal-Intel-WiFi-BT-Updater.ps1`
 2. Place both files in the same directory
-3. Run `Universal-Intel-Chipset-Updater.bat` as Administrator
+3. Run `Universal-Intel-WiFi-BT-Updater.bat` as Administrator
 4. Follow the on-screen prompts to scan and update your drivers
 
 ### Option 3: Direct PowerShell
-1. Download `Universal-Intel-Chipset-Updater.ps1`
+1. Download `Universal-Intel-WiFi-BT-Updater.ps1`
 2. Open PowerShell as Administrator
-3. Run: `powershell -ExecutionPolicy Bypass -File "Universal-Intel-Chipset-Updater.ps1"`
+3. Run: `powershell -ExecutionPolicy Bypass -File "Universal-Intel-WiFi-BT-Updater.ps1"`
 
-## 🗃️ Driver Database & Hardware Compatibility
+## 🔧 Driver Database & Compatibility
 
-**Complete HW_ID mapping available in:** [`Intel_Chipset_Drivers_Latest.md`](https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/blob/main/Intel_Chipset_Drivers_Latest.md)
+This tool uses real-time driver information from official Windows Update servers:
 
-This tool uses an extensive database built from analyzing **88 official Intel SetupChipset.exe installers**, spanning:
+- **Wi-Fi Drivers**: Version 24.0.2.1 (October 2025)
+- **Bluetooth Drivers**: Version 24.0.1.1 (September 2025)
+- **Hardware Support**: Complete Intel Wi-Fi 5/6/6E/7 and Bluetooth device coverage
+- **Platform Support**: Windows 10 and Windows 11 (64-bit)
 
-- **Historical Coverage**: From version 10.0.13.0 (February 26, 2015) to 10.1.20314.8688 (August 14, 2025)
-- **Complete Hardware Support**: **82,663 driver version comparisons** across all HW_IDs used in Intel chipset drivers
-- **Multi-Platform**: Supports Consumer, Server, Workstation, and Mobile platforms
-
-The comprehensive database includes:
-- **All known Intel HW_IDs** with assigned platforms and generations
-- **Latest driver versions** for each chipset component  
-- **Package information** required for installation
-- **Platform categorization** (Mainstream, Workstation, Server, Atom)
+The script automatically:
+- Detects your specific Intel wireless hardware
+- Downloads appropriate drivers for your devices
+- Performs safe driver installation using Windows pnputil
+- Provides version comparison and update status
 
 ## ⚠️ Important Notes
 
 - **Administrator Rights Required**: The script must be run as Administrator for proper functionality
-- **Restart Required**: A system restart is often necessary after driver installation
-- **Temporary Black Screen**: During PCIe bus driver updates, the screen may temporarily go black
-- **Device Reconnection**: Some devices may temporarily disconnect during installation
-- **Internet Connection Required**: Needed to download the latest driver information and packages
+- **Temporary Disconnections**: Wi-Fi and Bluetooth will be temporarily disconnected during update
+- **Internet Connection Required**: Needed to download driver information and packages
+- **Automatic Cleanup**: Temporary files are automatically removed after installation
+- **Force Reinstall Option**: Available for troubleshooting or fresh installations
 
-## 🔧 Troubleshooting
+## 🔍 Troubleshooting
 
 ### Common Issues
 
 1. **"Script cannot run"** - Ensure you're running as Administrator and both files are in the same directory
-2. **"No Intel chipset found"** - Verify your system uses an Intel chipset (Sandy Bridge or newer)
-3. **Installation failures** - Check internet connection and temporary directory permissions
-
-### Missing Platform Support?
-
-If your platform isn't detected, check the [HW_ID database](https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/blob/main/Intel_Chipset_Drivers_Latest.md) to see if your hardware is listed. If not, use the Intel Chipset HW_ID Detection Tool to generate a report.
+2. **"No Intel adapters found"** - Verify your system uses Intel Wi-Fi/Bluetooth hardware
+3. **Installation failures** - Check internet connection and try debug mode
+4. **Driver not updating** - Use force reinstall option to override version checks
 
 ### Debug Mode
 
-For detailed logging and troubleshooting, you can:
-1. Examine the script output for specific error messages
-2. Check Windows Device Manager for any devices with warning icons
-3. Verify the temporary directory `C:\Windows\Temp\IntelChipset` is accessible
+For detailed logging and troubleshooting:
+1. Use the debug versions: `Debug-Update-Intel-WiFi-BT.bat` and `Debug-Update-Intel-WiFi-BT.ps1`
+2. Provides extensive logging for issue diagnosis
+3. Shows detailed driver installation progress
+
+### Manual Update
+
+If automatic detection fails, you can manually update the driver information in the source files with the latest links from official Intel sources.
 
 ## 🤝 Contributing
 
-We welcome contributions! If you have:
+Driver information is maintained based on official Intel driver releases and Windows Update catalog. If you have access to newer driver information or hardware support improvements, please contribute to the project.
 
-- New driver versions or platform information
-- Improvements to the detection logic
+We welcome contributions for:
+- New driver versions or hardware support
+- Improvements to detection logic
 - Bug fixes or feature enhancements
-- Additional HW_ID mappings for the database
-
-Please feel free to submit a Pull Request or open an Issue.
+- Additional device compatibility
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License © 2025 [FirstEverTech](https://github.com/FirstEverTech)  
+This project is provided as-is for educational and convenience purposes.
 
 ## 📸 Screenshot
 
-<img width="602" height="1056" alt="Universal Intel Chipset Updater" src="https://github.com/user-attachments/assets/288c2ff2-36e0-4199-8780-3dc881e009fd" />
+<img width="602" height="832" alt="Intel Wi-Fi & BT Driver Updater" src="https://github.com/user-attachments/assets/cf4aa504-8525-4ef7-9059-49217ff8a202" />
 
 ## ⚠️ Disclaimer
 
-This tool is not affiliated with Intel Corporation. Drivers are sourced from official Intel servers. Use at your own risk. Always backup your system before updating drivers.
+This tool is not affiliated with Intel Corporation. Drivers are sourced from official Windows Update servers. Use at your own risk. Always backup your system before updating drivers.
 
 ## 📞 Support
 
-If the updater does not detect your hardware, please use the additional tool Intel Chipset HW_ID Detection Tool and send us the generated log.
-Files: `Get-Intel-HWIDs.ps1` and `Get-Intel-HWIDs.bat`.
-
-- **Repository**: [https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater](https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater)
-- **HW_ID Database**: [Intel_Chipset_Drivers_Latest.md](https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/blob/main/Intel_Chipset_Drivers_Latest.md)
-- **Issues**: [GitHub Issues](https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/issues)
+- **Repository**: [https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater)
+- **VirusTotal Scan**: [Result 0/98](https://www.virustotal.com/gui/url/d510a622186b403f9c328c6db36f846cd09be3ac193b6c1bfb4a4720b251bac5/detection) (Clean)
+- **Issues**: [GitHub Issues](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/issues)
 
 ## 🧑‍💻 Author/Maintainer
 
 **Marcin Grygiel**
 - 🌐 **Website**: [www.firstever.tech](https://www.firstever.tech)
-- 💼 **LinkedIn**: [Marcin Grygiel](https://www.linkedin.com/in/marcin-grygiel/)
 - 🔧 **GitHub**: [FirstEverTech](https://github.com/FirstEverTech)
-- 💖 **Support**: [PayPal](https://www.paypal.com/donate/?hosted_button_id=48VGDSCNJAPTJ) | [Buy Me a Coffee](https://buymeacoffee.com/firstevertech)
-
-Your support helps maintain and improve this project for everyone!
+- 💼 **LinkedIn**: [Marcin Grygiel](https://www.linkedin.com/in/marcin-grygiel/)
 
 ---
 
-**Note**: This tool is provided as-is for educational and convenience purposes. While we strive for accuracy, always verify critical driver updates through official channels. The complete HW_ID database is available for transparency and community contributions.
+**Note**: This tool is provided as-is for educational and convenience purposes. While we strive for accuracy, always verify critical driver updates through official channels. The complete hardware compatibility list is available in the script source code.
