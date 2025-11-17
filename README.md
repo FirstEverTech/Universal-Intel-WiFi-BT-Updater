@@ -122,6 +122,9 @@ This tool is not affiliated with Intel Corporation. Drivers are sourced from off
 
 ## 📞 Support
 
+If the updater does not detect your hardware, please use the additional tool Intel Chipset HW_ID Detection Tool and send us the generated log.
+Files: `Get-Intel-HWIDs.ps1` and `Get-Intel-HWIDs.bat`.
+
 - **Repository**: [https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater)
 - **Issues**: [GitHub Issues](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/issues)
 
