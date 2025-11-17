@@ -37,7 +37,7 @@ Automated tool to download and install the latest Intel Wi-Fi and Bluetooth driv
 
 ### Option 1: SFX EXE (Recommended)
 1. Download the self-extracting executable:  
-   `WiFi-BT-24.0-2025.11-Driver64-Win10-Win11.exe` from the repository
+   `WiFi-BT-Updater-24.0-2025.11-Driver64-Win10-Win11.exe` from the repository
 2. Run the EXE as Administrator
 3. Follow the on-screen prompts to scan and update your drivers
 
@@ -97,6 +97,7 @@ If automatic detection fails, you can manually update the driver information in 
 
 ## 🤝 Contributing
 
+Special thanks to the Station Drivers community, particularly [@atplsx](https://github.com/atplsx) who share driver information that makes tools like this possible.
 Driver information is maintained based on official Intel driver releases and Windows Update catalog. If you have access to newer driver information or hardware support improvements, please contribute to the project.
 
 We welcome contributions for:
