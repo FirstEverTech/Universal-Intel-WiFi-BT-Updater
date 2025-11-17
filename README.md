@@ -2,6 +2,7 @@
 
 [![GitHub release](https://img.shields.io/github/v/release/FirstEverTech/Universal-Intel-WiFi-BT-Updater)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases)
 [![GitHub license](https://img.shields.io/github/license/FirstEverTech/Universal-Intel-WiFi-BT-Updater)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/FirstEverTech/Universal-Intel-WiFi-BT-Updater)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/issues)
 [![Windows](https://img.shields.io/badge/Windows-10%2B-blue)](https://www.microsoft.com/windows)
 [![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F98-green)](https://www.virustotal.com/gui/url/51bdede44cfa784c65a48cb4a0b5c077960425b8728c98b7110b8bf1d00432e9?nocache=1)
 
