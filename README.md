@@ -3,7 +3,7 @@
 [![GitHub release](https://img.shields.io/github/v/release/FirstEverTech/Universal-Intel-WiFi-BT-Updater)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases)
 [![GitHub license](https://img.shields.io/github/license/FirstEverTech/Universal-Intel-WiFi-BT-Updater)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/LICENSE)
 [![Windows](https://img.shields.io/badge/Windows-10%2B-blue)](https://www.microsoft.com/windows)
-[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F98-green)](https://www.virustotal.com/gui/url/d510a622186b403f9c328c6db36f846cd09be3ac193b6c1bfb4a4720b251bac5/detection)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F98-green)](https://www.virustotal.com/gui/url/51bdede44cfa784c65a48cb4a0b5c077960425b8728c98b7110b8bf1d00432e9?nocache=1)
 
 Automated tool to download and install the latest Intel Wi-Fi and Bluetooth drivers directly from Windows Update servers.
 
@@ -112,7 +112,7 @@ This project is provided as-is for educational and convenience purposes.
 
 ## 📸 Screenshot
 
-<img width="602" height="832" alt="Intel Wi-Fi & BT Driver Updater" src="https://github.com/user-attachments/assets/cf4aa504-8525-4ef7-9059-49217ff8a202" />
+<img width="602" height="832" alt="Universal Intel WiFi BT Updater" src="https://github.com/user-attachments/assets/4408e0a5-20e9-4f65-9bb0-9d0687e497bc" />
 
 ## ⚠️ Disclaimer
 
@@ -121,15 +121,15 @@ This tool is not affiliated with Intel Corporation. Drivers are sourced from off
 ## 📞 Support
 
 - **Repository**: [https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater)
-- **VirusTotal Scan**: [Result 0/98](https://www.virustotal.com/gui/url/d510a622186b403f9c328c6db36f846cd09be3ac193b6c1bfb4a4720b251bac5/detection) (Clean)
 - **Issues**: [GitHub Issues](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/issues)
 
 ## 🧑‍💻 Author/Maintainer
 
 **Marcin Grygiel**
 - 🌐 **Website**: [www.firstever.tech](https://www.firstever.tech)
-- 🔧 **GitHub**: [FirstEverTech](https://github.com/FirstEverTech)
 - 💼 **LinkedIn**: [Marcin Grygiel](https://www.linkedin.com/in/marcin-grygiel/)
+- 🔧 **GitHub**: [FirstEverTech](https://github.com/FirstEverTech)
+- 💖 **Support**: [PayPal](https://www.paypal.com/donate/?hosted_button_id=48VGDSCNJAPTJ) | [Buy Me a Coffee](https://buymeacoffee.com/firstevertech)
 
 ---
 
