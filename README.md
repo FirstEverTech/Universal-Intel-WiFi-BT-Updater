@@ -109,8 +109,7 @@ We welcome contributions for:
 
 ## 📄 License
 
-MIT License © 2025 [FirstEverTech](https://github.com/FirstEverTech)  
-This project is provided as-is for educational and convenience purposes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📸 Screenshot
 
