@@ -21,18 +21,59 @@ This tool automatically fetches and installs the newest Intel Wi-Fi and Bluetoot
 
 ## 📋 Supported Devices
 
-### 📡 Wi-Fi Adapters
-- **Wi-Fi 7**: BE201, BE202, BE200
-- **Wi-Fi 6E**: AX411 (Gig+), AX211 (Gig+), AX210 (Gig+)
-- **Wi-Fi 6**: AX203, AX200 (Gig+), AX201 (Gig+), AX101, Desktop Kit
-- **Wi-Fi 5**: AC 9560, AC 9462, AC 9461, AC 9260
-- **Legacy**: All other Intel wireless adapters
+# Intel & Killer Wireless Adapter Product Portfolio
 
-### 📱 Bluetooth Adapters
-- **Intel Bluetooth USB** (VID_8087): 0025, 0026, 0029, 0032, 0033, 0036, 0037, 0038, 0AAA
-- **Intel Bluetooth PCI** devices
-- **Intel Bluetooth UART** devices  
-- **Intel Killer Bluetooth** adapters
+## 📡 Wi-Fi Adapters
+
+### **Wi-Fi 7 (BE Series)**
+| Series | Intel Models | Killer Models | Key Features |
+|--------|--------------|---------------|--------------|
+| **BE200 Series** | BE200, BE202 | BE1750x, BE1750w, BE1775x, BE1775w | 320MHz channel width, 2x2 MIMO |
+| **BE201 Series** | BE201 | BE1750i, BE1750s | 320MHz channel width, 2x2 MIMO |
+| **BE211 Series** | BE211, BE213 | BE1775i, BE1775s | 160-320MHz channel width, 2x2 MIMO |
+
+### **Wi-Fi 6E (AX Series)**
+| Series | Intel Models | Killer Models | Key Features |
+|--------|--------------|---------------|--------------|
+| **AX210 Series** | AX210 | AX1675x, AX1675w | 160MHz channel width, 2x2 MIMO |
+| **AX211 Series** | AX211 | AX1675i, AX1675s | 160MHz channel width, 2x2 MIMO |
+| **AX411 Series** | AX411 | AX1690i, AX1690s | 160MHz channel width, 2x2 MIMO |
+
+### **Wi-Fi 6 (AX Series)**
+| Series | Intel Models | Killer Models | Key Features |
+|--------|--------------|---------------|--------------|
+| **AX200 Series** | AX200 | AX1650x, AX1650w | 160MHz channel width, 2x2 MIMO |
+
+### **Wi-Fi 5 (AC Series)**
+| Series | Intel Models | Killer Models | Key Features |
+|--------|--------------|---------------|--------------|
+| **AC 9560 Series** | AC 9560 | AC 1550i, AC 1550s | 160MHz channel width, 2x2 MIMO |
+| **AC 9260 Series** | AC 9260 | AC 1550 | 160MHz channel width, 2x2 MIMO |
+| **AC 9461/62 Series** | AC 9461, AC 9462 | - | 1x1 MIMO configuration |
+
+## 📱 Bluetooth Adapters
+
+### **Intel Bluetooth Solutions**
+- **USB Interface Devices**: VID_8087: 0025, 0026, 0029, 0032, 0033, 0036, 0037, 0038, 0AAA
+- **PCI Interface Devices**: Various PCIe-based Bluetooth controllers
+- **UART Interface Devices**: Serial protocol Bluetooth adapters
+
+### **Killer Bluetooth Solutions**
+- Integrated Bluetooth with Killer networking stack
+- Optimized for gaming and high-performance applications
+- Coexistence with Killer Wi-Fi technologies
+
+## 🏷️ Product Identification
+
+### **Model Number Convention**
+- **Intel**: [Technology][Model Number] (e.g., AX210, BE200)
+- **Killer**: [Technology][Model Number][Interface] (e.g., AX1675i, BE1750s)
+
+### **Interface Suffixes**
+- **i**: M.2 interface (2230/1216)
+- **s**: M.2 interface (2230)
+- **x**: Intel reference design
+- **w**: Killer optimized design
 
 ## 🛠️ Usage
 
