@@ -121,12 +121,12 @@ The script automatically:
 ## 🤝 Contributing
 
 Special thanks to [@atplsx](https://github.com/atplsx) who share driver information that makes tools like this possible.
-Driver information is maintained based on official Intel driver releases and Windows Update catalog. If you have access to newer driver information or hardware support improvements, please contribute to the project.
+This tool is updated based on official Intel driver releases and the Windows Update catalog. If you have access to newer driver information or hardware support improvements, please support the project.
 
 We welcome contributions for:
-- New driver versions or hardware support
-- Improvements to detection logic
-- Bug fixes or feature enhancements
+- New driver versions or hardware
+- Script improvements
+- Bug reports
 
 ## 📄 License
 
