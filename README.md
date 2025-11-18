@@ -120,7 +120,7 @@ The script automatically:
 
 ## 🤝 Contributing
 
-Special thanks to the Station Drivers community, particularly [@atplsx](https://github.com/atplsx) who share driver information that makes tools like this possible.
+Special thanks to [@atplsx](https://github.com/atplsx) who share driver information that makes tools like this possible.
 Driver information is maintained based on official Intel driver releases and Windows Update catalog. If you have access to newer driver information or hardware support improvements, please contribute to the project.
 
 We welcome contributions for:
