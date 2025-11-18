@@ -121,7 +121,7 @@ The script automatically:
 ## 🤝 Contributing
 
 Special thanks to [@atplsx](https://github.com/atplsx) who share driver information that makes tools like this possible.
-This tool is updated based on official Intel driver releases and the Windows Update catalog. If you have access to newer driver information or hardware support improvements, please support the project.
+This tool is updated based on official Intel driver releases and the Windows Update catalog. If you have access to newer driver information or hardware informations, please support the project.
 
 We welcome contributions for:
 - New driver versions or hardware
