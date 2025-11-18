@@ -69,12 +69,6 @@ This tool automatically fetches and installs the newest Intel Wi-Fi and Bluetoot
 - **Intel**: [Technology][Model Number] (e.g., AX210, BE200)
 - **Killer**: [Technology][Model Number][Interface] (e.g., AX1675i, BE1750s)
 
-### **Interface Suffixes**
-- **i**: M.2 interface (2230/1216)
-- **s**: M.2 interface (2230)
-- **x**: Intel reference design
-- **w**: Killer optimized design
-
 ## 🛠️ Usage
 
 ### Option 1: SFX EXE (Recommended)
@@ -123,19 +117,7 @@ The script automatically:
 
 1. **"Script cannot run"** - Ensure you're running as Administrator and both files are in the same directory
 2. **"No Intel adapters found"** - Verify your system uses Intel Wi-Fi/Bluetooth hardware
-3. **Installation failures** - Check internet connection and try debug mode
-4. **Driver not updating** - Use force reinstall option to override version checks
-
-### Debug Mode
-
-For detailed logging and troubleshooting:
-1. Use the debug versions: `Debug-Update-Intel-WiFi-BT.bat` and `Debug-Update-Intel-WiFi-BT.ps1`
-2. Provides extensive logging for issue diagnosis
-3. Shows detailed driver installation progress
-
-### Manual Update
-
-If automatic detection fails, you can manually update the driver information in the source files with the latest links from official Intel sources.
+3. **Installation failures** - Check internet connection
 
 ## 🤝 Contributing
 
@@ -146,7 +128,6 @@ We welcome contributions for:
 - New driver versions or hardware support
 - Improvements to detection logic
 - Bug fixes or feature enhancements
-- Additional device compatibility
 
 ## 📄 License
 
