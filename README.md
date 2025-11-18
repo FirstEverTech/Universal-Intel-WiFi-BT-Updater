@@ -125,8 +125,7 @@ This tool is updated based on official Intel driver releases and the Windows Upd
 
 We welcome contributions for:
 - New driver versions or hardware
-- Script improvements
-- Bug reports
+- Bug reports or script improvements
 
 ## 📄 License
 
