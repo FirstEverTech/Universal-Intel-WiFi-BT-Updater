@@ -109,7 +109,6 @@ The script automatically:
 - **Temporary Disconnections**: Wi-Fi and Bluetooth will be temporarily disconnected during update
 - **Internet Connection Required**: Needed to download driver information and packages
 - **Automatic Cleanup**: Temporary files are automatically removed after installation
-- **Force Reinstall Option**: Available for troubleshooting or fresh installations
 
 ## 🔍 Troubleshooting
 
