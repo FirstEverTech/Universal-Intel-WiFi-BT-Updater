@@ -1,4 +1,4 @@
-# Universal Intel Wi-Fi and Bluetooth Driver Updater 🚀
+# Universal Intel Wi-Fi and Bluetooth Drivers Updater 🚀
 
 [![GitHub release](https://img.shields.io/github/v/release/FirstEverTech/Universal-Intel-WiFi-BT-Updater)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases)
 [![GitHub license](https://img.shields.io/github/license/FirstEverTech/Universal-Intel-WiFi-BT-Updater)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/LICENSE)
