@@ -1,0 +1,5 @@
+Intel Wireless Wi-Fi
+DriverVer = 11/11/2025,24.10.0.4
+Link_1 = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/220110d4-57af-4395-ae5d-870f45dc933c_42dc2a7b96ad4e6c9a0011f3d0e4c98c50d6d20e.cab
+Backup_1 = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/v24.0-2025.11.1/intel_wifi_driver_24.10.0.4.cab
+SHA256_1 = 4C735962AFE89EBA40B9CA875A4A6FDF16DA08F3FFB4D4D63AA522A14A27CC74
