@@ -1,3 +1,3 @@
 Intel Wireless WiFi
-DriverVer = 11/11/2025,24.10.0.4
-http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2025/11/220110d4-57af-4395-ae5d-870f45dc933c_42dc2a7b96ad4e6c9a0011f3d0e4c98c50d6d20e.cab
+DriverVer = 01/06/2026,24.20.0.4
+http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/01/482bde6e-59be-44a7-9977-f767402f555e_29b8fc460f645ece8071cbd332c5141ed993c4b4.cab
