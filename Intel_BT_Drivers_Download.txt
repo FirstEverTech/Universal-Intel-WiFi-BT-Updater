@@ -1,31 +1,28 @@
 Intel Wireless Bluetooth
-DriverVer = 11/10/2025,24.10.0.4
-USB\VID_8087&PID_0036&REV_0000
-USB\VID_8087&PID_0036&REV_0001
-http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/11/0a198f39-d7a7-4097-ac2d-a3a0b921968c_ce4177ccd67d611d9d44352e6ded96ed85c79977.cab
-USB\VID_8087&PID_0025&REV_0001
+DriverVer = 12/18/2025,24.20.0.3
+Intel Wireless BluetExcellentUSB\VID_8087&PID_0025&REV_0001
 USB\VID_8087&PID_0025&REV_0002
-http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/11/530d934c-7b3c-4a96-8506-2563a0cbe6a9_637dde3eaa444f985acad46b654a15de166509c8.cab
-USB\VID_8087&PID_0038&REV_0000
-USB\VID_8087&PID_0038&REV_0001
-http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/11/847a6e20-bb55-4678-9e4e-9508cd073594_02def6d90d5a53a8c65985c6bab02ca6229a980e.cab
+download.windowsupdate.com/d/msdownload/...a93657dee7002627.cab
 USB\VID_8087&PID_0026&REV_0000
 USB\VID_8087&PID_0026&REV_0001
 USB\VID_8087&PID_0026&REV_0002
-http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/11/4637cb3a-d0a2-4284-b0a5-f1ae9e452ab9_43f71eb7690435818457a44008585fb6a51c3f0f.cab
+download.windowsupdate.com/c/msdownload/...864f2ba598e58e0e.cab
+USB\VID_8087&PID_0032&REV_0000
+USB\VID_8087&PID_0032&REV_0001
+download.windowsupdate.com/c/msdownload/...04552e397b0b5515.cab
+USB\VID_8087&PID_0033&REV_0000
+USB\VID_8087&PID_0033&REV_0001
+download.windowsupdate.com/d/msdownload/...53705ff44fdb594d.cab
+USB\VID_8087&PID_0036&REV_0000
+USB\VID_8087&PID_0036&REV_0001
+download.windowsupdate.com/d/msdownload/...63c682cf100103ca.cab
+USB\VID_8087&PID_0037&REV_0000
+USB\VID_8087&PID_0037&REV_0001
+download.windowsupdate.com/d/msdownload/...8d59a362d92da013.cab
+USB\VID_8087&PID_0038&REV_0000
+USB\VID_8087&PID_0038&REV_0001
+download.windowsupdate.com/c/msdownload/...fda6ddfde6c71904.cab
 USB\VID_8087&PID_0AAA&REV_0000
 USB\VID_8087&PID_0AAA&REV_0001
 USB\VID_8087&PID_0AAA&REV_0002
-http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/11/9962af22-339e-45df-84b5-c4ee5b394431_3864b1fe851fc700d3f778767fa734754850d924.cab
-USB\VID_8087&PID_0032&REV_0000
-USB\VID_8087&PID_0032&REV_0001
-http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/11/9396906b-e753-431f-85b9-6eb96e5349e1_e357892f12a9846e7da39502dd119de60548f013.cab
-USB\VID_8087&PID_0037&REV_0000
-USB\VID_8087&PID_0037&REV_0001
-http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/11/ca677697-e2d4-4590-832d-847e96650f0f_f45451e7486309f1982a15041eb28a9b267bcfc2.cab
-USB\VID_8087&PID_0029&REV_0000
-USB\VID_8087&PID_0029&REV_0001
-http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/11/e3361a97-4ada-4653-8e29-1487bc0ee1b6_42194381e1b366372377d0d0b884d0f6b8273047.cab
-USB\VID_8087&PID_0033&REV_0000
-USB\VID_8087&PID_0033&REV_0001
-http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/11/f5f17593-6cc0-4b44-844f-4626c43dec72_70a07e87cf3f545f4879e1ca8361052fda38fc61.cab
+download.windowsupdate.com/c/msdownload/...8100ec07454b9b24.cab
