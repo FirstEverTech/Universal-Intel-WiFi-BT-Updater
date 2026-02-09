@@ -5,56 +5,56 @@ DriverVer = 12/18/2025,24.20.0.3
 USB\VID_8087&PID_0025&REV_0001
 USB\VID_8087&PID_0025&REV_0002
 SHA256 = 363EADB62F14E6BDD1DB24F16718A7D2C99EC884D3F96B3561316B5AA59F1813
-Primary = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/01/79fff2bb-a994-4bfe-a8b6-5dba83d30439_d70c997c10bccd50aff4b77ca93657dee7002627.cab
-Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/79fff2bb-a994-4bfe-a8b6-5dba83d30439_d70c997c10bccd50aff4b77ca93657dee7002627.cab
+Link = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/01/79fff2bb-a994-4bfe-a8b6-5dba83d30439_d70c997c10bccd50aff4b77ca93657dee7002627.cab
+Backup = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/79fff2bb-a994-4bfe-a8b6-5dba83d30439_d70c997c10bccd50aff4b77ca93657dee7002627.cab
 
 [Entry_2]
 USB\VID_8087&PID_0033&REV_0000
 USB\VID_8087&PID_0033&REV_0001
 SHA256 = 6D7C86799D4F461024D6144E3227A952D6312620EA7A8229B24C2DA13CA47C48
-Primary = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/01/3304d710-0207-41ad-b2d4-b3649c522ec7_217cda1cf38f30e8cd9511a153705ff44fdb594d.cab
-Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/3304d710-0207-41ad-b2d4-b3649c522ec7_217cda1cf38f30e8cd9511a153705ff44fdb594d.cab
+Link = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/01/3304d710-0207-41ad-b2d4-b3649c522ec7_217cda1cf38f30e8cd9511a153705ff44fdb594d.cab
+Backup = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/3304d710-0207-41ad-b2d4-b3649c522ec7_217cda1cf38f30e8cd9511a153705ff44fdb594d.cab
 
 [Entry_3]
 USB\VID_8087&PID_0036&REV_0000
 USB\VID_8087&PID_0036&REV_0001
 SHA256 = 8CA84DBA3100643CAFBEC20B95894C67521D49329085B8A216817FDA613E1F40
-Primary = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/01/99279cc2-0cc4-40e5-adb3-44bde147aa95_6a39a0a44e9f1ffa978e087263c682cf100103ca.cab
-Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/99279cc2-0cc4-40e5-adb3-44bde147aa95_6a39a0a44e9f1ffa978e087263c682cf100103ca.cab
+Link = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/01/99279cc2-0cc4-40e5-adb3-44bde147aa95_6a39a0a44e9f1ffa978e087263c682cf100103ca.cab
+Backup = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/99279cc2-0cc4-40e5-adb3-44bde147aa95_6a39a0a44e9f1ffa978e087263c682cf100103ca.cab
 
 [Entry_4]
 USB\VID_8087&PID_0037&REV_0000
 USB\VID_8087&PID_0037&REV_0001
 SHA256 = E64159D4BEA38136852E76E03BCF5655A602D7DFC18BC320BF0E178EDA254ABD
-Primary = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/01/a7b88f08-479f-40b2-8226-079567e21f3a_a9d23f96ea988a472f892fdd8d59a362d92da013.cab
-Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/a7b88f08-479f-40b2-8226-079567e21f3a_a9d23f96ea988a472f892fdd8d59a362d92da013.cab
+Link = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/01/a7b88f08-479f-40b2-8226-079567e21f3a_a9d23f96ea988a472f892fdd8d59a362d92da013.cab
+Backup = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/a7b88f08-479f-40b2-8226-079567e21f3a_a9d23f96ea988a472f892fdd8d59a362d92da013.cab
 
 [Entry_5]
 USB\VID_8087&PID_0026&REV_0000
 USB\VID_8087&PID_0026&REV_0001
 USB\VID_8087&PID_0026&REV_0002
 SHA256 = 04A28057D1547CA808611535952BF2C5ED12E07B9A842543ED1BF9C10BE6E311
-Primary = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2026/01/ab7c05d4-2f57-4406-8454-633ce5c0f0db_c7d5a66977c4e59c44aaf42e864f2ba598e58e0e.cab
-Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/c05d4-2f57-4406-8454-633ce5c0f0db_c7d5a66977c4e59c44aaf42e864f2ba598e58e0e.cab
+Link = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2026/01/ab7c05d4-2f57-4406-8454-633ce5c0f0db_c7d5a66977c4e59c44aaf42e864f2ba598e58e0e.cab
+Backup = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/c05d4-2f57-4406-8454-633ce5c0f0db_c7d5a66977c4e59c44aaf42e864f2ba598e58e0e.cab
 
 [Entry_6]
 USB\VID_8087&PID_0AAA&REV_0000
 USB\VID_8087&PID_0AAA&REV_0001
 USB\VID_8087&PID_0AAA&REV_0002
 SHA256 = 0CC9AD72EEBBA17E8DC3AE0FF8A27DAB88C35E3907E193182553D0D16117A330
-Primary = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2026/01/db9b5e4e-d7db-4980-b891-915c0e2a148f_b098919ba8995ff7b344dadf8100ec07454b9b24.cab
-Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/db9b5e4e-d7db-4980-b891-915c0e2a148f_b098919ba8995ff7b344dadf8100ec07454b9b24.cab
+Link = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2026/01/db9b5e4e-d7db-4980-b891-915c0e2a148f_b098919ba8995ff7b344dadf8100ec07454b9b24.cab
+Backup = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/db9b5e4e-d7db-4980-b891-915c0e2a148f_b098919ba8995ff7b344dadf8100ec07454b9b24.cab
 
 [Entry_7]
 USB\VID_8087&PID_0032&REV_0000
 USB\VID_8087&PID_0032&REV_0001
 SHA256 = F6C0D8251830789CCA287E442A5ED1A73EE5D6B57A2BDCADEC0D6A27BC974E34
-Primary = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2026/01/e8509ae3-022f-4023-af73-d7ca39c1ed96_81af13c214ccd654ebfdb85404552e397b0b5515.cab
-Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/e8509ae3-022f-4023-af73-d7ca39c1ed96_81af13c214ccd654ebfdb85404552e397b0b5515.cab
+Link = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2026/01/e8509ae3-022f-4023-af73-d7ca39c1ed96_81af13c214ccd654ebfdb85404552e397b0b5515.cab
+Backup = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/e8509ae3-022f-4023-af73-d7ca39c1ed96_81af13c214ccd654ebfdb85404552e397b0b5515.cab
 
 [Entry_8]
 USB\VID_8087&PID_0038&REV_0000
 USB\VID_8087&PID_0038&REV_0001
 SHA256 = FB8E81021546B1C81F0612BCD2E2465E7CE400F64D399148DB39FDD661E88221
-Primary = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2026/01/ebeb2f4f-d784-40bc-952a-ca90b2a50399_a8821ba57462efba00a318f8fda6ddfde6c71904.cab
-Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/ebeb2f4f-d784-40bc-952a-ca90b2a50399_a8821ba57462efba00a318f8fda6ddfde6c71904.cab
+Link = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2026/01/ebeb2f4f-d784-40bc-952a-ca90b2a50399_a8821ba57462efba00a318f8fda6ddfde6c71904.cab
+Backup = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/raw/main/drvs/bt/24.20.0.3/ebeb2f4f-d784-40bc-952a-ca90b2a50399_a8821ba57462efba00a318f8fda6ddfde6c71904.cab
