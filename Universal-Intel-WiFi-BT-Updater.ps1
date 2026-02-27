@@ -171,50 +171,6 @@ function Download-Extract-Cab {
     return $false
 }
 
-# Function to detect Wi-Fi adapter type and select appropriate INF
-function Get-RecommendedInfFile {
-    param([string]$DriverPath)
-    
-    $infFiles = Get-ChildItem -Path $DriverPath -Filter "Netwtw*.inf" | Sort-Object Name
-    
-    if ($infFiles.Count -eq 0) {
-        return $null
-    }
-    
-    # Find Intel Wireless devices and check for newer adapters
-    $wirelessDevices = Get-PnpDevice | Where-Object {
-        $_.Class -eq "Net" -and 
-        $_.FriendlyName -like "*Intel*" -and 
-        ($_.FriendlyName -like "*Wi-Fi*" -or $_.FriendlyName -like "*Wireless*" -or $_.FriendlyName -like "*WLAN*") -and
-        $_.Status -eq "OK"
-    }
-    
-    # Check for Wi-Fi 6E/7 adapters
-    foreach ($device in $wirelessDevices) {
-        $deviceName = $device.FriendlyName
-        if ($deviceName -like "*AX21*" -or $deviceName -like "*BE200*" -or $deviceName -like "*Wi-Fi 6E*" -or $deviceName -like "*Wi-Fi 7*") {
-            # Prefer Netwtw6e.inf for newer adapters
-            $recommendedInf = $infFiles | Where-Object { $_.Name -like "*6e*" } | Select-Object -First 1
-            if ($recommendedInf) {
-                return $recommendedInf.FullName
-            }
-        }
-    }
-    
-    # Fallback to Netwtw08.inf for older adapters
-    $fallbackInf = $infFiles | Where-Object { $_.Name -like "*08*" } | Select-Object -First 1
-    if ($fallbackInf) {
-        return $fallbackInf.FullName
-    }
-    
-    # If no specific INF found, use the first available
-    if ($infFiles.Count -gt 0) {
-        return $infFiles[0].FullName
-    }
-    
-    return $null
-}
-
 # Function to get appropriate CAB for Bluetooth device
 function Get-BluetoothCabForDevice {
     param([string]$DeviceInstanceId, [array]$BluetoothCabData)
@@ -533,27 +489,46 @@ if ($response -eq "Y" -or $response -eq "y") {
     # Update Wi-Fi drivers if needed
     if ($wifiUpdateAvailable -and $wifiDriverPath -and (Test-Path $wifiDriverPath)) {
         Write-Host "Installing Wi-Fi drivers..." -ForegroundColor Green
-        $infFile = Get-RecommendedInfFile -DriverPath $wifiDriverPath
-        if ($infFile) {
-            Write-Host "Selected Wi-Fi driver: $(Split-Path $infFile -Leaf)" -ForegroundColor Cyan
+        $infFiles = Get-ChildItem -Path $wifiDriverPath -Filter "Netwtw*.inf" -Recurse
+
+        if ($infFiles.Count -gt 0) {
+            Write-Host "Found $($infFiles.Count) Wi-Fi driver packages. Installing all..." -ForegroundColor Cyan
+
+            # Step 1: Add all found driver INFs to the system driver store
+            foreach ($infFile in $infFiles) {
+                pnputil /add-driver "$($infFile.FullName)" /install 2>$null | Out-Null
+            }
             
+            # Step 2: Update the hardware with the best available driver
             if ($forceReinstall) {
-                # Use force reinstall method - suppress output by assigning to $null
+                Write-Host "Forcing driver reinstallation for Wi-Fi devices..." -ForegroundColor Yellow
                 foreach ($device in $supportedWirelessDevices) {
-                    $null = Force-ReinstallDriver -DeviceInstanceId $device.InstanceId -InfFilePath $infFile -DeviceType "Wi-Fi"
+                    try {
+                        Write-Host "Reinstalling for: $($device.FriendlyName)" -ForegroundColor White
+                        $device | Disable-PnpDevice -Confirm:$false -ErrorAction Stop 2>&1 | Out-Null
+                        Start-Sleep -Seconds 3
+
+                        $device | Enable-PnpDevice -Confirm:$false -ErrorAction Stop 2>&1 | Out-Null
+                        Start-Sleep -Seconds 3
+
+                        # Just update, the drivers are already in the store
+                        pnputil /update-device "$($device.InstanceId)" /install 2>$null | Out-Null
+                        Start-Sleep -Seconds 2
+                    } catch {
+                        Write-Host "Failed to force reinstall for $($device.FriendlyName)" -ForegroundColor Red
+                    }
                 }
             } else {
-                # Normal installation
-                pnputil /add-driver "$infFile" /install 2>$null | Out-Null
-                
+                # Normal update scan
                 foreach ($device in $supportedWirelessDevices) {
                     pnputil /update-device "$($device.InstanceId)" /install 2>$null | Out-Null
                 }
             }
+
             Write-Host "Wi-Fi driver update completed." -ForegroundColor Green
             Write-Host ""
         } else {
-            Write-Host "Error: Could not find appropriate INF file for Wi-Fi driver." -ForegroundColor Red
+            Write-Host "Error: Could not find any INF files for Wi-Fi driver." -ForegroundColor Red
         }
     }
     
