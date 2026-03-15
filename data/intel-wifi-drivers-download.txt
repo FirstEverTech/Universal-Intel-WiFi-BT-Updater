@@ -1,0 +1,5 @@
+Name = Intel Wi-Fi Drivers
+DriverVer = 12/02/2026,24.20.2.1
+SHA256 = 797F22D0B2FCB2378D494A0112179DBB5F5B89DD71B61BE7669FBF88078AA9F3
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-wifi/intel_wifi_24.20.2.1.cab
+Backup = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2026/02/3606c069-f604-4653-be9a-2f090227747b_7aaaadf02e8b4ee5861f3226a1d1dca03c436d94.cab
