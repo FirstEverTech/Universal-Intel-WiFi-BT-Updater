@@ -336,11 +336,20 @@ WiFiBTUpdater-2026.03.0002-Win10-Win11.exe (or later version)
 ```
 
 <a id="method-4-powershell-gallery"></a>
-### 8.4 Method 4: PowerShell Gallery
+
+Install from PowerShell Gallery (Run PowerShell as Administrator):
 ```powershell
-# Install from PowerShell Gallery (Run PowerShell as Administrator):
 Install-Script universal-intel-wifi-bt-driver-updater
-universal-intel-wifi-bt-driver-updater.ps1
+```
+
+Manual update from PowerShell Gallery for v2025.11.0001 (Run PowerShell as Administrator):
+```powershell
+Update-Script -Name universal-intel-wifi-bt-driver-updater
+```
+
+Run from PowerShell Gallery (Run PowerShell as Administrator):
+```powershell
+universal-intel-wifi-bt-driver-updater
 ```
 
 <a id="command-line-options"></a>
