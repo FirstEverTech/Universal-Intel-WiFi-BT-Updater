@@ -190,13 +190,13 @@ This project has been reviewed by multiple AI systems using structured security 
 
 | Auditor | Mar 2026 | Notes |
 |---------|----------|-------|
-| ChatGPT | **9.7** | Consistently high; tends toward optimistic scoring |
-| Claude | **9.1** | Most critical reviewer |
-| Copilot | **9.5** | Strong improvement recognition |
-| DeepSeek | **9.4** | Balanced methodology |
-| Gemini | **10.0** | Most generous reviewer |
-| Grok | **9.9** | Highest baseline |
-| **Average** | **9.6** | |
+| ChatGPT | **N/A** | Consistently high; tends toward optimistic scoring |
+| Claude | **N/A** | Most critical reviewer |
+| Copilot | **N/A** | Strong improvement recognition |
+| DeepSeek | **N/A** | Balanced methodology |
+| Gemini | **N/A** | Most generous reviewer |
+| Grok | **N/A** | Highest baseline |
+| **Average** | **N/A** | |
 
 *For full audit reports, methodology and detailed findings, see [AI_AUDITS.md](AI_AUDITS.md).*
 
