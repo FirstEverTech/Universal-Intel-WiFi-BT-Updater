@@ -25,7 +25,7 @@ For detailed documentation and guides, see:
 - For transparency and additional verification, the project is listed on: **[MajorGeeks](https://www.majorgeeks.com/files/details/intel_wi_fi_bluetooth_driver_updater.html)**<!--, **[Softpedia](https://www.softpedia.com/)** and **[Instalki](https://www.instalki.pl/)**-->.
 
 ---
---->
+
 ## 💼 Career Opportunity
 
 > [!TIP]
