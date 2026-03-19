@@ -37,8 +37,7 @@ The part after **`DEV_`** (here **`272B`**) or **`PID_`** (here **`0036`**) is t
 ---
 
 #### 4. Look up the device in the databases I maintain on GitHub
-Open the database in your browser:
-> **Note:** You will immediately see the **driver date and version** as officially released by Intel.
+Open the database in your browser, you will immediately see the **driver date and version** as officially released by Intel.
 
 ### **[Intel Wi-Fi Drivers Latest](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-wifi-driver-latest.md)**
 
