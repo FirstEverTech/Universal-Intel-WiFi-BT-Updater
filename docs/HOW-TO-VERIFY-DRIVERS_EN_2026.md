@@ -38,29 +38,26 @@ The part after **`DEV_`** (here **`272B`**) or **`PID_`** (here **`0036`**) is t
 
 #### 4. Look up the device in the databases I maintain on GitHub
 Open the database in your browser:
+> **Note:** You will immediately see the **driver date and version** as officially released by Intel.
 
-- **[Intel Wi-Fi Driver database](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-wifi-driver-latest.md)**
+### **[Intel Wi-Fi Drivers Latest](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-wifi-driver-latest.md)**
 
-<img width="640" height="350" alt="The latest Intel Wi-Fi driver in database on GitHub" src="https://github.com/user-attachments/assets/d6827ff1-748f-4caa-8910-69e0ec7ca91b" />  
- 
-- **[Intel Bluetooth Drivers database](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-bt-driver-latest.md)**
+<img width="660" height="420" alt="image" src="https://github.com/user-attachments/assets/fb48884c-bbec-4371-9bea-cbedc968e657" />
+  
+### **[Intel Wireless Bluetooth Drivers Latest](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-bt-driver-latest.md)**
 
-<img width="640" height="350" alt="The latest Intel Bluetooth driver in database on GitHub" src="https://github.com/user-attachments/assets/cec208e4-df8a-4f74-bcea-126f6f985e58" />  
+<img width="660" height="420" alt="image" src="https://github.com/user-attachments/assets/290f2ba7-8ac4-4f2e-8394-dfec7841fbfb" />  
+  
 
-You will immediately see:
-- ✅ The **latest driver version** for that device,
-- ✅ The **driver date and version** as officially released by Intel.
 
 Search for your device to make sure it is on the list of models supported by this driver (e.g. `272B` or `0036`).
 > **Note:** If your device is very old or no longer supported by Intel, it may not appear in these databases.
+
 
 ---
 
 #### 5. Compare with what your driver tool says
 If another program does not see the latest version or suggests a downgrade to an older version, that is not correct.
-
----
-
 The **[Universal Intel Wi‑Fi and Bluetooth Drivers Updater](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater)** tool will **automatically** check for all your Intel wireless devices in seconds, then download and install the correct packages with full hash verification.
 
 ---
