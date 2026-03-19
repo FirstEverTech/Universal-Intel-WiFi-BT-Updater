@@ -19,9 +19,9 @@ Wybierz jedną z metod:
 #### 2. Znajdź urządzenie Intel Wi‑Fi lub Bluetooth
 - Rozwiń sekcję **„Karty sieciowe”** dla urządzeń Wi‑Fi lub **„Bluetooth”** dla urządzeń Bluetooth.
 - Poszukaj pozycji zawierającej w nazwie **„Intel”**, **„Wi‑Fi”**, **„Wireless”**, **„Bluetooth”** itp.
-- Często nazwa zawiera już model urządzenia – na przykład: `Intel(R) Wi‑Fi 6E AX211 160MHz` lub `Intel(R) Wireless Bluetooth(R)`. Dokładny identyfikator sprzętu znajdziesz w następnym kroku.
+- Często nazwa zawiera już model urządzenia – na przykład: `Intel(R) Wi‑Fi 7 BE200 320MHz` lub `Intel(R) Wireless Bluetooth(R)`. Dokładny identyfikator sprzętu znajdziesz w następnym kroku.
 
-<img width="817" height="341" alt="Sekcja Kart sieciowych w Menedżerze urządzeń z podświetlonym urządzeniem Intel Wi‑Fi" src="https://github.com/user-attachments/assets/58c94b5e-d6e8-4a01-a161-21f3c3b78e7c" />
+<img width="781" height="350" alt="image" src="https://github.com/user-attachments/assets/6f9572ee-72e7-4816-9a8b-ccd7b354c616" />
 
 ---
 
