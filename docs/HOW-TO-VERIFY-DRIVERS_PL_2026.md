@@ -1,69 +1,62 @@
-## Jak samodzielnie sprawdzić najnowsże sterowniki
+## Jak samodzielnie sprawdzić najnowsze sterowniki
 
-Zamiast ufać innym aktualizatorom sterowników (nawet oficjalnemu narzędziu Intel Driver & Support Assistant), które często sugerują nieprawidłowe wersje lub downgrade, możesz łatwo ręcznie sprawdzić **prawdziwą najnowszą wersję sterownika** dla dowolnego urządzenia Intel Wi‑Fi lub Bluetooth. Oto jak:
+Zamiast ufać innym aktualizatorom sterowników (nawet oficjalnemu narzędziu Intel Driver & Support Assistant), które często sugerują stare wersje, możesz łatwo ręcznie sprawdzić **prawdziwą najnowszą wersję sterownika** dla dowolnego urządzenia Intel Wi‑Fi lub Bluetooth. Oto jak to zrobić:
 
 ---
 
-### Instrukcja krok po kroku (wybierz urządzenie bezprzewodowe)
+### Instrukcja krok po kroku (wybierz jedno lub więcej urządzeń bezprzewodowych)
 
 #### 1. Otwórz Menedżer urządzeń  
-Wybierz jedną z metod:
-- Naciśnij **Win + X** → **Menedżer urządzeń**
-- Naciśnij **Win**, wpisz `Menedżer urządzeń` i zatwierdź Enterem
-- Naciśnij **Win + R**, wpisz `devmgmt.msc` i zatwierdź Enterem
+Wybierz jedną z poniższych metod:
+- Naciśnij **klawisz Win + X** → **Menedżer urządzeń**
+- Naciśnij **klawisz Win**, wpisz `Menedżer urządzeń` i naciśnij Enter
+- Naciśnij **klawisz Win + R**, wpisz `devmgmt.msc` i naciśnij Enter
 
-<img width="825" height="344" alt="Menedżer urządzeń z rozwiniętą sekcją Karty sieciowe i zaznaczonym urządzeniem Intel Wi‑Fi" src="https://github.com/user-attachments/assets/f51d40d6-565e-4129-ad69-a9826458bb7a" />
+<img width="825" height="344" alt="Menedżer urządzeń z rozwiniętą sekcją Karty sieciowe pokazującą urządzenie Intel Wi‑Fi" src="https://github.com/user-attachments/assets/f51d40d6-565e-4129-ad69-a9826458bb7a" />
 
 ---
 
-#### 2. Znajdź urządzenie Intel Wi‑Fi lub Bluetooth
+#### 2. Znajdź urządzenie Intel Wi‑Fi lub Intel Bluetooth
 - Rozwiń sekcję **„Karty sieciowe”** dla urządzeń Wi‑Fi lub **„Bluetooth”** dla urządzeń Bluetooth.
-- Poszukaj pozycji zawierającej w nazwie **„Intel”** i **„Wi‑Fi”** lub **„Bluetooth”**.
-- Często nazwa zawiera już model urządzenia – na przykład: `Intel(R) Wi‑Fi 7 BE200 320MHz` lub `Intel(R) Wireless Bluetooth(R)`. Dokładny identyfikator sprzętu znajdziesz w następnym kroku.
+- Poszukaj pozycji zawierającej w nazwie **„Intel(R) Wi‑Fi”** lub **„Intel(R) Wireless Bluetooth(R)”**.
+- Często nazwa zawiera już model sprzętu – na przykład: `Intel(R) Wi‑Fi 7 BE200 320MHz`.
 
 <img width="781" height="350" alt="image" src="https://github.com/user-attachments/assets/6f9572ee-72e7-4816-9a8b-ccd7b354c616" />
 
 ---
 
-#### 3. Jeśli HWID nie znajduje się w nazwie, sprawdź właściwości Identyfikatory sprzętu
-- Kliknij urządzenie prawym przyciskiem → **Właściwości** → zakładka **Szczegóły**.
+#### 3. Znajdź dokładny identyfikator sprzętu (DEV_ lub PID_ we właściwości Identyfikatory sprzętu)
+- Kliknij urządzenie prawym przyciskiem myszy → **Właściwości** → karta **Szczegóły**, następnie:
 - Z listy rozwijanej **Właściwość** wybierz **„Identyfikatory sprzętu”**.
-- Zobaczysz coś w rodzaju: `PCI\VEN_8086&DEV_272B&CC_0280` dla Wi‑Fi lub `USB\VID_8087&PID_0036` dla Bluetooth.  
-  Część po **`DEV_`** (tutaj **`272B`**) lub **`PID_`** jest najważniejszym identyfikatorem (tutaj **`0036`**).
+
+Zobaczysz coś takiego: `PCI\VEN_8086&DEV_272B&CC_0280` dla Wi‑Fi lub `USB\VID_8087&PID_0036` dla Bluetooth.  
+Część po **`DEV_`** (tutaj **`272B`**) lub **`PID_`** (tutaj **`0036`**) jest najważniejszym identyfikatorem.
 
 <img width="800" height="473" alt="image" src="https://github.com/user-attachments/assets/d92bd36b-5c5d-4310-bf06-23798f205515" />
 
 ---
 
-#### 4. Odnajdź urządzenie w bazach danych, które prowadzę na GitHub
-Otwórz odpowiedni plik w przeglądarce:
+#### 4. Sprawdź urządzenie w bazach danych, które prowadzę na GitHubie
+Otwórz bazę w przeglądarce, od razu zobaczysz **datę i wersję sterownika** oficjalnie wydane przez Intel.
 
-- **Sterowniki Wi‑Fi:**  
-  👉 **[intel-wifi-driver-latest.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-wifi-driver-latest.md)**
-- **Sterowniki Bluetooth:**  
-  👉 **[intel-bt-driver-latest.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-bt-driver-latest.md)**
+### **[Najnowsze sterowniki Intel Wi-Fi](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-wifi-driver-latest.md)**
 
-Naciśnij **Ctrl+F** i wyszukaj model urządzenia (np. `AX211`) lub fragment identyfikatora (np. `51F1`).
+<img width="660" height="420" alt="image" src="https://github.com/user-attachments/assets/fb48884c-bbec-4371-9bea-cbedc968e657" />
+  
+### **[Najnowsze sterowniki Intel Wireless Bluetooth](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-bt-driver-latest.md)**
 
-<img width="891" height="194" alt="Wyszukiwanie AX211 w bazie sterowników na GitHub" src="https://github.com/user-attachments/assets/3f73a395-96f3-4aca-8c0d-2eb235e1b368" />
+<img width="660" height="420" alt="image" src="https://github.com/user-attachments/assets/290f2ba7-8ac4-4f2e-8394-dfec7841fbfb" />  
+  
 
-Od razu zobaczysz:
-- ✅ **Najnowszą wersję sterownika** dla tego urządzenia,
-- ✅ Który (najnowszy) **pakiet sterowników** (plik CAB) go zawiera,
-- ✅ **Datę i wersję sterownika** zgodnie z oficjalnym wydaniem Intela.
 
-> **Uwaga:** Jeśli urządzenie jest bardzo stare lub nie jest już wspierane przez Intel, może nie występować w tych bazach.
+Wyszukaj swoje urządzenie, aby upewnić się, że znajduje się na liście modeli obsługiwanych przez ten sterownik (np. `272B` lub `0036`).
+> **Uwaga:** Jeśli Twoje urządzenie jest bardzo stare lub nie jest już wspierane przez Intel, może nie pojawić się w tych bazach.
 
 ---
 
-#### 5. Porównaj z tym, co mówi Twoje narzędzie do aktualizacji
-Jeśli inny program nie widzi najnowszej wersji lub sugeruje downgrade do starszej, to jest to błędna informacja.
-
----
-
-Uwierz mi, **nikt inny nie jest na tyle szalony**, aby pobrać, rozpakować i przeanalizować **każdy opublikowany kiedykolwiek pakiet sterowników Intel Wi‑Fi i Bluetooth**, a następnie skompilować je w kompletną, przeszukiwalną bazę danych. To właśnie zrobiłem – i to jest podstawa **[Universal Intel Wi‑Fi and Bluetooth Drivers Updater](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater)**.
-
-To narzędzie wykonuje powyższe sprawdzenie **automatycznie** dla wszystkich urządzeń bezprzewodowych Intel w kilka sekund, a następnie pobiera i instaluje właściwe pakiety z pełną weryfikacją hash.
+#### 5. Porównaj z tym, co pokazuje narzędzie do sterowników
+Jeśli inny program nie widzi najnowszej wersji lub sugeruje downgrade do starszej wersji, to nie jest prawidłowe.
+Narzędzie **[Universal Intel Wi‑Fi and Bluetooth Drivers Updater](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater)** **automatycznie** sprawdzi wszystkie Twoje urządzenia bezprzewodowe Intel w kilka sekund, a następnie pobierze i zainstaluje odpowiednie pakiety z pełną weryfikacją skrótów.
 
 ---
 
