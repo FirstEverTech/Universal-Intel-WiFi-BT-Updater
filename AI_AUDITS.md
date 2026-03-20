@@ -3,7 +3,7 @@
 
 This document provides a structured overview of security reviews conducted by AI language models on this project. These are not formal penetration tests or third-party audits — they are structured code and architecture reviews using security frameworks (OWASP, CWE, CVSS v3.1) applied by each model independently. Each section shows the latest audit per auditor with a full score history. Full reports are linked for reference.
 
-Average score (March 2026): **9.5/10** across 6 AI-reviewed audit cycles. All reviewers confirmed the multi-layer verification architecture and consistent improvement between cycles. Note: Claude (Anthropic) — the lowest-scoring and most critical reviewer — awarded 8.7/10.
+Average score (March 2026): **9.5/10** across 6 AI-reviewed audit cycles. All reviewers confirmed the multi-layer verification architecture and consistent improvement between cycles. Note: Claude (Anthropic) — the lowest-scoring and most critical reviewer — awarded 8.9/10.
 
 ---
 
@@ -31,23 +31,23 @@ ChatGPT confirms the project successfully reuses the proven security architectur
 
 | Audit Date | Version | Score | Full Report |
 |------------|---------|-------|-------------|
-| Mar 19, 2026 | v2026.03.0002 | 9.5/10 | [2026-03-19-CHATGPT-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19-CHATGPT-AUDIT.md) |
+| Mar 19, 2026 | v2026.03.0002 | 9.5/10 | [2026-03-19-CHATGPT-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19/2026-03-19-CHATGPT-AUDIT.md) |
 
 ---
 
 ## 🔒 Claude (Anthropic)
 
-![Security Audit](https://img.shields.io/badge/Audit_Score-8.7%2F10-brightgreen?style=for-the-badge)![Reliability](https://img.shields.io/badge/Reliability-Very_Good-2e7d32?style=for-the-badge)![Verification](https://img.shields.io/badge/Multi--Layer_Passed-green?style=for-the-badge&color=blue)
+![Security Audit](https://img.shields.io/badge/Audit_Score-8.9%2F10-brightgreen?style=for-the-badge)![Reliability](https://img.shields.io/badge/Reliability-Very_Good-2e7d32?style=for-the-badge)![Verification](https://img.shields.io/badge/Multi--Layer_Passed-green?style=for-the-badge&color=blue)
 
-**Latest audit:** March 19, 2026 · v2026.03.0002 · Score: **8.7/10**
+**Latest audit:** March 20, 2026 · v2026.03.0002 · Score: **8.9/10**
 
-Claude’s detailed review – the most critical of the set – initially flagged three issues, all later retracted as false positives. The final report notes the absence of an explicit Intel signature pre‑check (partially mitigated by `pnputil`’s signing enforcement) and applies a v1.0 track‑record penalty. Hardware detection logic is correctly scoped, and the dual‑source fallback works flawlessly.
+Claude's detailed review — the most critical of the set — confirms the security architecture is complete and production-grade: self-hash verification, SHA-256 driver integrity checks, dual download sources, automated restore points, and OS-level HWID validation all function correctly. The only substantive finding is unchecked `pnputil` exit codes in the installation pipeline, which carries no security impact and has a straightforward fix. A small second-release track-record penalty accounts for the remaining gap to 9.0.
 
-> *"A clean, architecturally sound v1.0 that inherits the best of a mature sibling project."*
+> *"A mature-by-design second release. Four thousand-plus clean deployments with zero confirmed defects speak louder than any static analysis."*
 
 | Audit Date | Version | Score | Full Report |
 |------------|---------|-------|-------------|
-| Mar 19, 2026 | v2026.03.0002 | 8.7/10 | [2026-03-19-CLAUDE-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19-CLAUDE-AUDIT.md) |
+| Mar 20, 2026 | v2026.03.0002 | 8.9/10 | [2026-03-20-CLAUDE-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19/2026-03-20-CLAUDE-AUDIT.md) |
 
 ---
 
@@ -63,7 +63,7 @@ Copilot praises the security‑first architecture inherited from the chipset pro
 
 | Audit Date | Version | Score | Full Report |
 |------------|---------|-------|-------------|
-| Mar 19, 2026 | v2026.03.0002 | 9.4/10 | [2026-03-19-COPILOT-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19-COPILOT-AUDIT.md) |
+| Mar 19, 2026 | v2026.03.0002 | 9.4/10 | [2026-03-19-COPILOT-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19/2026-03-19-COPILOT-AUDIT.md) |
 
 ---
 
@@ -79,7 +79,7 @@ DeepSeek commends the flawless adaptation of the chipset engine to CAB‑based d
 
 | Audit Date | Version | Score | Full Report |
 |------------|---------|-------|-------------|
-| Mar 19, 2026 | v2026.03.0002 | 9.4/10 | [2026-03-19-DEEPSEEK-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19-DEEPSEEK-AUDIT.md) |
+| Mar 19, 2026 | v2026.03.0002 | 9.4/10 | [2026-03-19-DEEPSEEK-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19/2026-03-19-DEEPSEEK-AUDIT.md) |
 
 ---
 
@@ -95,7 +95,7 @@ Gemini awards a perfect score, highlighting the tool’s complete security cover
 
 | Audit Date | Version | Score | Full Report |
 |------------|---------|-------|-------------|
-| Mar 19, 2026 | v2026.03.0002 | 10/10 | [2026-03-19-GEMINI-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19-GEMINI-AUDIT.md) |
+| Mar 19, 2026 | v2026.03.0002 | 10/10 | [2026-03-19-GEMINI-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19/2026-03-19-GEMINI-AUDIT.md) |
 
 ---
 
@@ -111,7 +111,7 @@ Grok’s analysis confirms that the security stack is nearly identical to the 9.
 
 | Audit Date | Version | Score | Full Report |
 |------------|---------|-------|-------------|
-| Mar 19, 2026 | v2026.03.0002 | 9.9/10 | [2026-03-19-GROK-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19-GROK-AUDIT.md) |
+| Mar 19, 2026 | v2026.03.0002 | 9.9/10 | [2026-03-19-GROK-AUDIT.md](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/audit-reports/2026-03-19/2026-03-19-GROK-AUDIT.md) |
 
 ---
 
@@ -120,7 +120,7 @@ Grok’s analysis confirms that the security stack is nearly identical to the 9.
 | Auditor | Mar 2026 | Trend | Notes |
 |---------|----------|-------|-------|
 | ChatGPT | **9.5** | → | Consistently high; emphasises layered security and OS safeguards. |
-| Claude | **8.7** | → | Most critical; flagged missing explicit signature check (mitigated) and v1.0 penalty. |
+| Claude | **8.9** | → | Most critical; one substantive finding (pnputil exit codes, no security impact). |
 | Copilot | **9.4** | → | Balanced view; praises architecture, notes lack of INF signature validation. |
 | DeepSeek | **9.4** | → | Focuses on correct CAB adaptation and Windows HWID safety net. |
 | Gemini | **10.0** | → | Most generous; perfect score reflects lenient criteria but acknowledges completeness. |
