@@ -1,4 +1,4 @@
-# 🤖 AI Security & Code Quality Audits
+# AI Security & Code Quality Audits
 ## Universal Intel Wi‑Fi and Bluetooth Drivers Updater
 
 This document summarizes independent security and code quality audits performed by leading AI models on the **Universal Intel Wi‑Fi and Bluetooth Drivers Updater** project. All audits confirm the tool’s **high security, clean code, and enterprise readiness**.
