@@ -1,0 +1,42 @@
+Name = Intel Wi-Fi Drivers
+DriverVer = 12/02/2026,24.20.2.1
+
+DEV_272B
+DEV_A840
+DEV_A841
+DEV_E340
+DEV_E440
+DEV_2725
+DEV_51F0
+DEV_51F1
+DEV_54F0
+DEV_7A70
+DEV_7AF0
+DEV_7E40
+DEV_7F70
+DEV_2723
+DEV_7740
+DEV_02F0
+DEV_06F0
+DEV_34F0
+DEV_3DF0
+DEV_43F0
+DEV_4DF0
+DEV_A0F0
+DEV_2526
+DEV_30DC
+DEV_31DC
+DEV_9DF0
+DEV_A370
+SHA256 = 797F22D0B2FCB2378D494A0112179DBB5F5B89DD71B61BE7669FBF88078AA9F3
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-wifi/intel_wifi_24.20.2.1.cab
+Backup = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2026/02/3606c069-f604-4653-be9a-2f090227747b_7aaaadf02e8b4ee5861f3226a1d1dca03c436d94.cab
+
+# FUTURE EXAMPLE: Legacy Intel Wireless Bluetooth Drivers
+DEV_xxxx
+DEV_yyyy
+Version = 2x.xx.x.x
+Date = DD/MM/YYYY
+SHA256 = NEW_SHA256
+Link = https://github.com/.../intel_wifi_2x.xx.x.x.cab
+Backup = http://download.windowsupdate.com/.../file_name.cab

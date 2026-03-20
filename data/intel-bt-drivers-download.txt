@@ -1,0 +1,61 @@
+Name = Intel Wireless Bluetooth
+DriverVer = 04/03/2026,24.30.1.1
+
+USB\VID_8087&PID_0025&REV_0001
+USB\VID_8087&PID_0025&REV_0002
+SHA256 = 53E2C35686F059F85B51099ACCE373AF0976957D14914F918A6866079C47E790
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel_bt_24.30.1.1_pid0025.cab
+Backup = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/03/a668f3e9-dfe3-45b1-8021-89eeedc304fb_867d14aed36638fe3ce6df867b2c56e6e2957064.cab
+
+USB\VID_8087&PID_0026&REV_0000
+USB\VID_8087&PID_0026&REV_0001
+USB\VID_8087&PID_0026&REV_0002
+SHA256 = 8F366B791535A03D2E68A552FF60BF1D7D45D3F4E5F23479B8A93FF9BCF56515
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel_bt_24.30.1.1_pid0026.cab
+Backup = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/03/1221b31b-11e6-43ae-95be-12f69d739f08_820910ba702e71225ae05f840ac6898352497fdf.cab
+
+USB\VID_8087&PID_0032&REV_0000
+USB\VID_8087&PID_0032&REV_0001
+SHA256 = 82BECC3DC1C6E46EABF81DB072914FDD33A0CC7AAC2EC65B1F3626661E48A8DA
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel_bt_24.30.1.1_pid0032.cab
+Backup = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/03/85eddd9a-6dd9-4e8f-af1d-f518205bf9fb_4bc88922b248aa3d994b66dae0e7099839693afe.cab
+
+USB\VID_8087&PID_0033&REV_0000
+USB\VID_8087&PID_0033&REV_0001
+SHA256 = 37B9B27B83C1398E5C762CD88B18A22301F859F19C0C3F7C18C25AA07B0FBC60
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel_bt_24.30.1.1_pid0033.cab
+Backup = http://download.windowsupdate.com/d/msdowncast/update/driver/drvs/2026/03/62559b52-fbf1-4a41-a1c0-5f29961ce317_a5c15e49bf9287bd768d86311debb77ce00d1f8c.cab
+
+USB\VID_8087&PID_0036&REV_0000
+USB\VID_8087&PID_0036&REV_0001
+SHA256 = 74083172ED0B1F1F98E94F0A94FDE8D0AF15C686A7FEB0B1674934A09F7437E5
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel_bt_24.30.1.1_pid0036.cab
+Backup = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/03/2d4b3f97-a4f7-48e2-847d-5c9fa4ef1fd1_c58f2f50d96410170bc9f78f20c0366a4b87b10e.cab
+
+USB\VID_8087&PID_0037&REV_0000
+USB\VID_8087&PID_0037&REV_0001
+SHA256 = 17CBAC8350DF543F7E44CFC71AAF6A02C523449F11A8D5E75D5BD0D2DD67C3DF
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel_bt_24.30.1.1_pid0037.cab
+Backup = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/03/6efdb060-0336-45ab-9910-22d0ddc1c987_98ddee9650286b8bbd1f4cb26c2a6d760f1f77d5.cab
+
+USB\VID_8087&PID_0038&REV_0000
+USB\VID_8087&PID_0038&REV_0001
+SHA256 = 3B4D8E8252610F5B4FAD745E81BC7FE926937778A9B1C94BD9AD34F611879B6A
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel_bt_24.30.1.1_pid0038.cab
+Backup = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/03/9835a7ae-809a-4c53-b210-77d2cdd8e4ec_0725a2664efea47aa8fa858f07596e9d3298477e.cab
+
+USB\VID_8087&PID_0AAA&REV_0000
+USB\VID_8087&PID_0AAA&REV_0001
+USB\VID_8087&PID_0AAA&REV_0002
+SHA256 = 7452FFA2D2FA06C02EB75390E91FC436795E8E51BF7F9E2A221A77856E0ED857
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel_bt_24.30.1.1_pid0AAA.cab
+Backup = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/03/325646b5-d58f-4354-a018-8eb7178833df_437567d4d4c801b18851ddc9e3104bb5e0124d4d.cab
+
+# Legacy Intel Wireless Bluetooth Drivers
+USB\VID_8087&PID_0029&REV_0000
+USB\VID_8087&PID_0029&REV_0001
+Version = 24.10.0.4
+Date = 11/10/2025
+SHA256 = F4F75E4567394B85945FCF507F53FA5DD0C50F450E93A54B4FC1FFF46E4FC3E3
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel_bt_24.10.0.4_pid0029.cab
+Backup = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2025/11/e3361a97-4ada-4653-8e29-1487bc0ee1b6_42194381e1b366372377d0d0b884d0f6b8273047.cab
