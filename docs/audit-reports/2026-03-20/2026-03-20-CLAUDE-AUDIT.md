@@ -184,8 +184,8 @@ All security layers are intact and functional:
 5. Project Origin      → SFX signed certificate                     ✅
 6. System Safety       → Automated Restore Points                   ✅
 7. Source Reliability  → Dual Download Sources (GitHub + WU CDN)    ✅
-8. Input Safety        → Whitelist argument parsing                  ✅
-9. Path Safety         → Environment variable paths throughout       ✅
+8. Input Safety        → Whitelist argument parsing                 ✅
+9. Path Safety         → Environment variable paths throughout      ✅
 ```
 
 **No security vulnerabilities were identified.**
