@@ -522,16 +522,7 @@ universal-intel-wifi-bt-driver-updater
 - [POWERSHELL-GALLERY-PUBLISHING_EN_2026.md](docs/POWERSHELL-GALLERY-PUBLISHING_EN_2026.md) - PowerShell Gallery Publishing Guide (English)
 - [POWERSHELL-GALLERY-PUBLISHING_PL_2026.md](docs/POWERSHELL-GALLERY-PUBLISHING_PL_2026.md) - PowerShell Gallery Publishing Guide (Polish)
 
-`docs/audit-reports/2026-03-19/` - AI audit reports
-
-  - [2026-03-19-CHATGPT-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-CHATGPT-AUDIT.md)
-  - [2026-03-19-CLAUDE-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-CLAUDE-AUDIT.md)
-  - [2026-03-19-COPILOT-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-COPILOT-AUDIT.md)
-  - [2026-03-19-DEEPSEEK-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-DEEPSEEK-AUDIT.md)
-  - [2026-03-19-GEMINI-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-GEMINI-AUDIT.md)
-  - [2026-03-19-GROK-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-GROK-AUDIT.md)
-
-`docs/audit-reports/2026-03-19/` - AI audit reports
+`docs/audit-reports/2026-03-21/` - AI audit reports
 
   - [2026-03-21-CHATGPT-AUDIT.md](docs/audit-reports-2026-03-21/2026-03-21-CHATGPT-AUDIT.md)
   - [2026-03-21-CLAUDE-AUDIT.md](docs/audit-reports-2026-03-21/2026-03-21-CLAUDE-AUDIT.md)
@@ -539,6 +530,15 @@ universal-intel-wifi-bt-driver-updater
   - [2026-03-21-DEEPSEEK-AUDIT.md](docs/audit-reports-2026-03-21/2026-03-21-DEEPSEEK-AUDIT.md)
   - [2026-03-21-GEMINI-AUDIT.md](docs/audit-reports-2026-03-21/2026-03-21-GEMINI-AUDIT.md)
   - [2026-03-21-GROK-AUDIT.md](docs/audit-reports-2026-03-21/2026-03-21-GROK-AUDIT.md)  
+
+`docs/audit-reports/2026-03-19/` - AI audit reports (archive)
+
+  - [2026-03-19-CHATGPT-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-CHATGPT-AUDIT.md)
+  - [2026-03-19-CLAUDE-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-CLAUDE-AUDIT.md)
+  - [2026-03-19-COPILOT-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-COPILOT-AUDIT.md)
+  - [2026-03-19-DEEPSEEK-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-DEEPSEEK-AUDIT.md)
+  - [2026-03-19-GEMINI-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-GEMINI-AUDIT.md)
+  - [2026-03-19-GROK-AUDIT.md](docs/audit-reports-2026-03-19/2026-03-19-GROK-AUDIT.md)
 
 `assets/` - Screenshots
 
