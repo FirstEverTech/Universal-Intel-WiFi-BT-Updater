@@ -154,7 +154,7 @@ For detailed documentation and guides, see:
 <a id="previous-releases"></a>
 ### 2.2 Previous Releases
 
-**v2026.03.0002**
+**v2026.03.0002** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.03.0002)
 
 ### 🆕 **Highlights**
 - **Architecture rebuilt from scratch** — fully aligned with Universal Intel Chipset Device Updater v2026.03.0013:
@@ -183,7 +183,6 @@ For detailed documentation and guides, see:
 <a id="older-releases"></a>
 ### 2.3 Older Releases
 
-**v2026.03.0002** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.03.0002)
 **v2025.11.0001 (old v2025.11)** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v24.0-2025.11)
 
 
