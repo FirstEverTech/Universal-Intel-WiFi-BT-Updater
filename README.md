@@ -1,6 +1,6 @@
 > [!CAUTION]
 > ### **v2026.03.0002 users:**  
-> If you encounter a hash verification error, please download [v2026.03.0003](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.03.0003) manually.  
+> If you encounter a hash verification error, please download [**v2026.03.0003**](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.03.0003) manually.  
 > This was caused by an incorrect filename in the auto-update URL — fixed in v2026.03.0003.
 
 <a id="top"></a>
