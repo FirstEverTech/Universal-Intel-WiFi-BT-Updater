@@ -199,17 +199,17 @@ This project has been reviewed by multiple AI systems using structured security 
 
 | Auditor | 2026-03-19 | 2026-03-23 | Trend | Notes |
 |---------|----------|----------|-------|-------|
-| ChatGPT | 9.5 | **9.?** | ↑ | Consistently high; tends toward optimistic scoring |
+| ChatGPT | 9.5 | **9.7** | ↑ | Consistently high; tends toward optimistic scoring |
 | Claude | 8.9 | **9.4** | ↑ | Most critical reviewer; lowest scores in the series |
-| Copilot | 9.4 | **9.?** | ↑ | Largest single-cycle jump (+0.8); strong improvement recognition |
-| DeepSeek | 9.4 | **9.?** | ↑ | Consistent mid-range scoring; balanced methodology |
+| Copilot | 9.4 | **9.5** | ↑ | Smallest single-cycle jump (+0.1); strong improvement recognition |
+| DeepSeek | 9.4 | **9.6** | ↑ | Consistent mid-range scoring; balanced methodology |
 | Gemini |  10.0| **10.0**| ↑ | Most generous reviewer; perfect score reflects lenient criteria |
-| Grok | 9.9 | **9.?** | ↑ | Highest baseline; limited score differentiation between cycles |
-| **Average** | **9.50** | **9.?** | ↑ | |
+| Grok | 9.9 | **9.95** | ↑ | Highest baseline; limited score differentiation between cycles |
+| **Average** | **9.52** | **9.69** | ↑ | |
 
 *For full audit reports, methodology and detailed findings, see [AI_AUDITS.md](AI_AUDITS.md).*
 
-> **Note:** Audits conducted March 2026 (v2026.03.0002). Core security architecture unchanged since audit.
+> **Note:** Audits conducted March 2026 (v2026.03.0003). Core security architecture unchanged since audit.
 
 
 [↑ Back to top](#top)
