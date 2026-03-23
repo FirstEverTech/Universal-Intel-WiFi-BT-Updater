@@ -143,6 +143,10 @@ For detailed documentation and guides, see:
 - **Expanded Wi-Fi Coverage** — 5 additional adapter DEV IDs added (AX203, AX101, 9260, 9461, 9462)
 - **Installation Reliability** — `pnputil` exit codes now correctly handled; force reinstall works in all scenarios
 
+### 📋 **Project Files**
+- `universal-intel-wifi-bt-driver-updater.ps1` — Main updater script
+- `WiFi-BT-Updater-2026.03.0003-Win10-Win11.exe` — Self-extracting package (includes updated script)
+
 ---
 
 [↑ Back to top](#top)
@@ -153,16 +157,6 @@ For detailed documentation and guides, see:
 **v2026.03.0002**
 
 ### 🆕 **Highlights**
-- **Microsoft WHCP Digital Signature Verification** — CAB packages verified against Microsoft Windows Hardware Compatibility Publisher certificate before installation
-- **Legacy Device Support** — per-device version/date in database files enables tracking EOL devices (e.g. AX200 Bluetooth PID_0029) with dedicated CAB packages
-- **Per-DEV Wi-Fi Download Blocks** — `intel-wifi-drivers-download.txt` rebuilt to support per-device CAB packages (mirrors BT parser); backward-compatible with v2026.03.0002
-- **Expanded Wi-Fi Coverage** — 5 additional adapter DEV IDs added (AX203, AX101, 9260, 9461, 9462)
-- **Installation Reliability** — `pnputil` exit codes now correctly handled; force reinstall works in all scenarios
->>>
-## 📦 Latest Release: v2026.03.0002
-
-### 🆕 **Highlights**
-
 - **Architecture rebuilt from scratch** — fully aligned with Universal Intel Chipset Device Updater v2026.03.0013:
   - Auto-elevation without requiring a separate `.bat` launcher
   - `universal-intel-wifi-bt-driver-updater.ps1` is now the single entry point for advanced users
@@ -181,10 +175,6 @@ For detailed documentation and guides, see:
 - **Boolean Flags**: Refactored `$DebugMode` and `$SkipSelfHashVerification` from integer `0`/`1` flags to native PowerShell `[bool]` types
 - **Code Cleanup**: Removed redundant wrapper functions — logic inlined directly into core verification routines
 - **Consistency**: Replaced all `cls` alias occurrences with `Clear-Host`
-
-### 📋 **Project Files**
-- `universal-intel-wifi-bt-driver-updater.ps1` — Main updater script
-- `WiFi-BT-Updater-2026.03.0002-Win10-Win11.exe` — Self-extracting package (includes updated script)
 
 ---
 
@@ -340,7 +330,7 @@ This project has been reviewed by multiple AI systems using structured security 
 ### 8.1 Method 1: One-Click Execution
 ```batch
 # Download and run executable file as Administrator:
-WiFi-BT-Updater-2026.03.0002-Win10-Win11.exe (or later version)
+WiFi-BT-Updater-2026.03.0003-Win10-Win11.exe (or later version)
 ```
 <a id="method-2-powershell-direct"></a>
 ### 8.2 Method 2: PowerShell Direct
@@ -478,7 +468,7 @@ universal-intel-wifi-bt-driver-updater
 ## 📥 **12. Download Options**
 <a id="option-1-sfx-executable-recommended"></a>
 ### 12.1 Option 1: SFX Executable (Recommended)
-- **File**: `WiFi-BT-Updater-2026.03.0002-Win10-Win11.exe`
+- **File**: `WiFi-BT-Updater-2026.03.0003-Win10-Win11.exe`
 - **Features**: Digital signature, one-click execution, automatic extraction and elevation
 - **For**: Most users — easiest method, no separate PowerShell step required
 <a id="option-2-script-direct"></a>
@@ -575,7 +565,7 @@ universal-intel-wifi-bt-driver-updater
 Each version (v202x.xx.xxxx) includes:
 <a id="primary-files"></a>
 ### 14.1 Primary Files
-- `WiFi-BT-Updater-2026.03.0002-Win10-Win11.exe` — Main executable (digitally signed SFX)
+- `WiFi-BT-Updater-2026.03.0003-Win10-Win11.exe` — Main executable (digitally signed SFX)
 - `universal-intel-wifi-bt-driver-updater.ps1` — PowerShell script
 <a id="verification-files"></a>
 ### 14.2 Verification Files  
