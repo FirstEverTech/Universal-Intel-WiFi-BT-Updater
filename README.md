@@ -32,7 +32,7 @@ For detailed documentation and guides, see:
 ---
 
 - Official threads on the following forums: **[TechPowerUp](https://www.techpowerup.com/forums/threads/tool-universal-intel-wi-fi-and-bluetooth-drivers-updater.342724/#post-5671700)**, **[Win-Raid](https://winraid.level1techs.com/t/tool-universal-intel-wifi-bluetooth-drivers-updater/112495)**, **[Station-Drivers](https://www.station-drivers.com/index.php/en/forum/intel-wireless-bluetooth-drivers/971-universal-intel-wi-fi-and-bluetooth-drivers-updater)**, **[ElevenForum](https://www.elevenforum.com/t/universal-intel-chipset-device-updater.41790/)** and **[WinClub](https://winclub.pl/topic/50298-universal-intel-wi-fi-and-bluetooth-drivers-updater/)**.
-- For transparency and additional verification, the project is listed on: **[MajorGeeks](https://www.majorgeeks.com/files/details/intel_wi_fi_bluetooth_driver_updater.html)**<!--, **[Softpedia](https://www.softpedia.com/)** and **[Instalki](https://www.instalki.pl/)**-->.
+- For transparency and additional verification, the project is listed on: **[MajorGeeks](https://www.majorgeeks.com/files/details/intel_wi_fi_bluetooth_driver_updater.html)**<!--, **[Softpedia](https://www.softpedia.com/)**--> and **[Instalki](https://www.instalki.pl/download/programy/sterowniki/karty-sieciowe/intel-karty-sieciowe/universal-intel-wi-fi-and-bluetooth-drivers-updater/)**.
 
 ---
 
