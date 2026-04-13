@@ -29,6 +29,9 @@ For detailed documentation and guides, see:
 ⭐ If this project helped you, please click the "Star" button at the top of this page on GitHub.  
 👉 [Share your feedback!](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/discussions)
 
+[![Stargazers over time](https://starchart.cc/FirstEverTech/Universal-Intel-WiFi-BT-Updater.svg?variant=adaptive)](https://starchart.cc/FirstEverTech/Universal-Intel-WiFi-BT-Updater)
+Copy
+
 ---
 
 - Official threads on the following forums: **[TechPowerUp](https://www.techpowerup.com/forums/threads/tool-universal-intel-wi-fi-and-bluetooth-drivers-updater.342724/#post-5671700)**, **[Win-Raid](https://winraid.level1techs.com/t/tool-universal-intel-wifi-bluetooth-drivers-updater/112495)**, **[Station-Drivers](https://www.station-drivers.com/index.php/en/forum/intel-wireless-bluetooth-drivers/971-universal-intel-wi-fi-and-bluetooth-drivers-updater)**, **[ElevenForum](https://www.elevenforum.com/t/universal-intel-chipset-device-updater.41790/)** and **[WinClub](https://winclub.pl/topic/50298-universal-intel-wi-fi-and-bluetooth-drivers-updater/)**.
