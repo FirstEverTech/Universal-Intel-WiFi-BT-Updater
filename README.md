@@ -30,7 +30,6 @@ For detailed documentation and guides, see:
 👉 [Share your feedback!](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/discussions)
 
 [![Stargazers over time](https://starchart.cc/FirstEverTech/Universal-Intel-WiFi-BT-Updater.svg?variant=adaptive)](https://starchart.cc/FirstEverTech/Universal-Intel-WiFi-BT-Updater)
-Copy
 
 ---
 
