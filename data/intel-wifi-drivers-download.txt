@@ -40,9 +40,9 @@ DEV_2723
 DEV_1010
 DEV_9461
 DEV_9260
-SHA256 = UNKNOWN_SHA256
-Link = UNKNOWN_LINK
-Backup = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/20xx/xx/long_name.cab
+SHA256 = 797F22D0B2FCB2378D494A0112179DBB5F5B89DD71B61BE7669FBF88078AA9F3
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-wifi/intel_wifi_24.20.2.1.cab
+Backup = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2026/02/3606c069-f604-4653-be9a-2f090227747b_7aaaadf02e8b4ee5861f3226a1d1dca03c436d94.cab
 
 # FUTURE EXAMPLE: when a device goes legacy, add a separate block like this.
 # v2026.03.0002 will use the global header above (unaffected).
