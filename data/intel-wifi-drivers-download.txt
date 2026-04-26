@@ -1,8 +1,8 @@
 Name = Intel Wi-Fi Drivers
-DriverVer = 03/03/2026,24.30.1.1
-SHA256 = 3F5E426C3E746F2EB9AC3CE5698C4DE8313378DA20A03AEB5F80A536ACF9BAFC
-Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-wifi/intel_wifi_24.30.1.1.cab
-Backup = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/20xx/xx/long_name.cab
+DriverVer = 14/04/2026,24.40.0.4
+SHA256 = 4365DA6D3AD51E942D5C091372536D2163DC3CA17FA5E389FEEDCB29AD5E339F
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-wifi/intel_wifi_24.40.0.4.cab
+Backup = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/04/a855de7b-b2e8-4192-8bca-2d3c74dc8665_2a7b7fffc6bd37f5093c6a0261f9aea45ac475f4.cab
 
 DEV_272B
 DEV_4D40
@@ -30,9 +30,9 @@ DEV_30DC
 DEV_31DC
 DEV_9DF0
 DEV_A370
-SHA256 = 3F5E426C3E746F2EB9AC3CE5698C4DE8313378DA20A03AEB5F80A536ACF9BAFC
-Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-wifi/intel_wifi_24.30.1.1.cab
-Backup = http://download.windowsupdate.com/c/msdownload/update/driver/drvs/20xx/xx/long_name.cab
+SHA256 = 4365DA6D3AD51E942D5C091372536D2163DC3CA17FA5E389FEEDCB29AD5E339F
+Link = https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-wifi/intel_wifi_24.40.0.4.cab
+Backup = http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/04/a855de7b-b2e8-4192-8bca-2d3c74dc8665_2a7b7fffc6bd37f5093c6a0261f9aea45ac475f4.cab
 
 DEV_A841
 DEV_2030
