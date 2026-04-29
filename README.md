@@ -132,6 +132,21 @@ For detailed documentation and guides, see:
 <a id="latest-version"></a>
 ### 2.1 Latest Version
 
+**v2026.04.0005** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.04.0005)
+
+### 🆕 **Highlights**
+- **Critical Bug Fix** — GitHub release asset URLs do not support query parameters; the cache buster appended to versioned `.txt` URLs caused silent download failures, preventing driver installation even when all files were correctly in place
+- **Dedicated Release Asset Downloader** — New `Get-ReleaseAssetContent` function uses `WebClient.DownloadString()` (with proper redirect handling) instead of `Invoke-WebRequest`, ensuring raw file content is always retrieved correctly
+- **Removed Monolithic Fallback** — `intel-wifi-drivers-download.txt` and `intel-bt-drivers-download.txt` are no longer used or required; the updater now relies exclusively on versioned release assets
+- **Cleaner Codebase** — Removed unused parsers (`Parse-WiFiDownloadList`, `Parse-BTDownloadList`, `Get-WiFiBlockForDevice`, `Get-BTBlockForDevice`) and associated variables
+
+---
+
+[↑ Back to top](#top)
+
+<a id="previous-releases"></a>
+### 2.2 Previous Releases
+
 **v2026.03.0004** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.03.0004)
 
 ## 📦 Latest Release: v2026.03.0004
@@ -147,29 +162,10 @@ For detailed documentation and guides, see:
 
 [↑ Back to top](#top)
 
-<a id="previous-releases"></a>
-### 2.2 Previous Releases
-
-**v2026.03.0003** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.03.0003)
-
-### 🆕 **Highlights**
-- **Microsoft WHCP Digital Signature Verification** — CAB packages verified against Microsoft Windows Hardware Compatibility Publisher certificate before installation
-- **Legacy Device Support** — per-device version/date in database files enables tracking EOL devices (e.g. AX200 Bluetooth PID_0029) with dedicated CAB packages
-- **Per-DEV Wi-Fi Download Blocks** — `intel-wifi-drivers-download.txt` rebuilt to support per-device CAB packages (mirrors BT parser); backward-compatible with v2026.03.0002
-- **Expanded Wi-Fi Coverage** — 5 additional adapter DEV IDs added (AX203, AX101, 9260, 9461, 9462)
-- **Installation Reliability** — `pnputil` exit codes now correctly handled; force reinstall works in all scenarios
-
-### 📋 **Project Files**
-- `universal-intel-wifi-bt-driver-updater.ps1` — Main updater script
-- `WiFi-BT-Updater-2026.03.0003-Win10-Win11.exe` — Self-extracting package (includes updated script)
-
----
-
-[↑ Back to top](#top)
-
 <a id="older-releases"></a>
 ### 2.3 Older Releases
 
+**v2026.03.0003** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.03.0003)
 **v2026.03.0002** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.03.0002)
 **v2025.11.0001 (old v2025.11)** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v24.0-2025.11)
 
