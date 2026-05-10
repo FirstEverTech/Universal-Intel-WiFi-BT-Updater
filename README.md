@@ -8,8 +8,8 @@
 [![License](https://img.shields.io/badge/License-MIT-0056b3?style=flat-square)](LICENSE)[![PS Gallery Version](https://img.shields.io/powershellgallery/v/universal-intel-wifi-bt-driver-updater?style=flat-square&label=PowerShell+Gallery)](https://www.powershellgallery.com/packages/universal-intel-wifi-bt-driver-updater)[![AI_Audits](https://img.shields.io/badge/AI_Audits_Score-9.69%2F10-0a8f08?style=flat-square)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/AI_AUDITS.md)[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F92-008631?style=flat-square)](https://www.virustotal.com/gui/url/0d936ddca9bf883cba5fd3312ce554a7ecd25a9d7468fc5dcc38a2faae1b4cb3?nocache=1)[![Issues](https://img.shields.io/github/issues/FirstEverTech/Universal-Intel-WiFi-BT-Updater?style=flat-square&label=Issues)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/issues)
 
 <a href="https://www.firstever.tech">
-  <img width="600" alt="" title="FirstEver.tech"
-       src="https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/blob/main/assets/FirstEverTech-animation.gif" />
+  <img width="600" alt="" title="Universal Intel Wi-Fi and Bluetooth Drivers Updater"
+       src="https://raw.githubusercontent.com/FirstEverTech/FirstEverTech/refs/heads/main/Images/Intel_Wireless.png" />
 </a>
 
 ## 🔧 Automate Your Intel Wi-Fi and Bluetooth Updates
@@ -772,6 +772,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 🔧 **GitHub**: [FirstEverTech](https://github.com/FirstEverTech)
 - 📧 **Contact**: [Contact Form](https://www.firstever.tech/contact)
 
+<img width="600" alt="Author Photo" title="Marcin Grygiel aka FirstEver and AI" src="https://github.com/user-attachments/assets/452c8553-5059-47c6-9ff9-d73443bb6c06" />
 
 [↑ Back to top](#top)
 
@@ -790,9 +791,11 @@ This project is maintained in my free time. Your support helps cover development
 - 👉 [Share your feedback!](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/discussions)
 
 ---
-<div align="center">
-<img width="480" alt="Author Photo" title="Marcin Grygiel aka FirstEver and AI" src="https://github.com/user-attachments/assets/452c8553-5059-47c6-9ff9-d73443bb6c06" />
-</div>
+
+<a href="https://www.firstever.tech">
+  <img width="600" alt="" title="FirstEver.tech"
+       src="https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/blob/main/assets/FirstEverTech-animation.gif" />
+</a>
 
 ---
 
