@@ -36,6 +36,10 @@ This project was built through a pragmatic collaboration between human expertise
 ### Why This Tool Exists
 Intel distributes Wi-Fi and Bluetooth drivers as large CAB packages — but your system only needs the version that matches your specific adapter. This tool automatically identifies your hardware, fetches the correct driver package from official sources, verifies its integrity, and installs it cleanly — nothing more, nothing less.
 
+---
+
+[![Wi--Fi Latest](https://img.shields.io/badge/Wi--Fi_Latest-v24.50.0.4-blue?style=flat-square)](https://www.intel.com/content/www/us/en/search.html#q=wi-fi)[![Wi--Fi Database](https://img.shields.io/badge/Wi--Fi_Database-20.05.2026-blue?style=flat-square)](https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/blob/main/data/intel-chipset-infs-latest.md)[![BT Latest](https://img.shields.io/badge/BT_Latest-v24.50.0.4-blue?style=flat-square)](https://www.intel.com/content/www/us/en/search.html#q=bluetooth)[![BT Database](https://img.shields.io/badge/BT_Database-08.05.2026-blue?style=flat-square)](https://github.com/FirstEverTech/Universal-Intel-Chipset-Updater/blob/main/data/intel-chipset-infs-latest.md)
+
 For detailed documentation and guides, see:  
 → **[Deploying Universal Intel Wi-Fi and BT Drivers Updater via MDM](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/MDM-DEPLOYMENT-GUIDE_EN_2026.md)**  
 → **[How to verify the latest drivers yourself](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/HOW-TO-VERIFY-DRIVERS_EN_2026.md)**
