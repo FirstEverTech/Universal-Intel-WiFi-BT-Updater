@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [2026.06.0007] - 2026-06-xx
+## [2026.06.0007] - 2026-06-xx (unreleased)
 
 ### Added
 - **PSGallery Self‑Update Mechanism**: Script now updates itself using `Update-Script -Force` when installed from PowerShell Gallery.
