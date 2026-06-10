@@ -3,7 +3,7 @@
 Latest Version = 24.50.0.4  
 Release Date = 08/05/2026
 
-## Supported Devices
+## Supported USB Devices
 
 | PID  | Chipset         | Generation      | Bluetooth | Latest Version | Release Date |
 |------|-----------------|-----------------|-----------|----------------|--------------|
@@ -17,4 +17,13 @@ Release Date = 08/05/2026
 | 0026 | AX201           | Wi-Fi 6 (CNVi)  | 5.1       | 24.50.0.4      | 08/05/2026   |
 | 0AAA | 9460 / 9560     | Wi-Fi 5         | 5.0       | 24.50.0.4      | 08/05/2026   |
 | 0025 | 9260            | Wi-Fi 5         | 5.0       | 24.50.0.4      | 08/05/2026   |
+
+## Supported PCI Devices
+
+| DEV  | Chipset         | Generation      | Bluetooth | Latest Version | Release Date |
+|------|-----------------|-----------------|-----------|----------------|--------------|
+| E376 | BE202 / BE204   | Wi-Fi 7         | 5.4       | 24.40.0.3      | 28/03/2026   |
+| E476 | AX210 / BE200   | Wi-Fi 6E/7      | 5.3/5.4   | 24.40.0.3      | 28/03/2026   |
+| 4D76 | AX211           | Wi-Fi 6E (CNVi) | 5.3       | 24.40.0.3      | 28/03/2026   |
+| A876 | AX200 / AX201   | Wi-Fi 6/CNVi    | 5.2/5.1   | 24.40.0.3      | 28/03/2026   |
 
