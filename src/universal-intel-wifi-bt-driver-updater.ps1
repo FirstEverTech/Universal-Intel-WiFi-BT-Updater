@@ -1,5 +1,5 @@
 <#PSScriptInfo
-.VERSION 2026.06.0006
+.VERSION 2026.06.0007
 .GUID b3a72f1e-9c4d-4b8a-a1f2-83d5e6c09f12
 .NAME universal-intel-wifi-bt-driver-updater
 .AUTHOR Marcin Grygiel
@@ -13,15 +13,9 @@
 .REQUIREDSCRIPTS
 .EXTERNALSCRIPTDEPENDENCIES
 .RELEASENOTES
-v2026.06.0006 - Bug fixes: added missing USB BT PID 0043 (AX211) to supported device list.
-               Fixed incorrect Legacy flag shown for PCI Bluetooth devices when USB has a newer version.
-               Fixed PCI legacy fallback in scanner (dead code corrected in v4.5 scanner).
-               Author line in Show-FinalCredits aligned with Show-Header.
-v2026.06.0006 - Added support for Intel Bluetooth PCI Enumerator devices.
-               Detects PCI\VEN_8086&DEV_xxxx hardware IDs.
-               Uses shared CAB package (intel-bt-<version>_pci.cab) for all PCI devices.
-               Updated banner: version 2026.06.0006, author line, removed GitHub visit line.
-               All comments are now in English.
+v2026.06.0007 - Added PSGallery self-update (Update-Script) for seamless upgrades.
+               Changed installation order: Bluetooth first, then Wi-Fi to avoid network loss.
+               Updated version to 2026.06.0007.
 #>
 
 <#
@@ -179,7 +173,7 @@ if ($QuietMode) {
 # =============================================
 # SCRIPT VERSION
 # =============================================
-$ScriptVersion = "2026.06.0006"
+$ScriptVersion = "2026.06.0007"
 # =============================================
 
 $isSFX = $MyInvocation.ScriptName -like "$env:SystemRoot\Temp\universal-intel-wifi-bt-driver-updater*"
@@ -731,6 +725,31 @@ function Check-ForUpdaterUpdates {
             return $true
         } elseif ($comparisonResult -lt 0) {
             Write-Host " A new version $latestVersion is available (current: $ScriptVersion)." -ForegroundColor Yellow
+
+            # Detect PSGallery installation
+            $psGalleryPath = Join-Path $env:ProgramFiles "WindowsPowerShell\Scripts"
+            $isPSGallery = $MyInvocation.ScriptName -like "$psGalleryPath*"
+
+            if ($isPSGallery) {
+                Write-Host ""
+                Write-Host " Detected PowerShell Gallery installation." -ForegroundColor Cyan
+                Write-Host " Updating via Update-Script..." -ForegroundColor Yellow
+                Write-Host ""
+                try {
+                    Update-Script universal-intel-wifi-bt-driver-updater -Force -ErrorAction Stop
+                    Write-Host " SUCCESS: Script updated successfully." -ForegroundColor Green
+                    Write-Host " Please run the script again to use the new version." -ForegroundColor Yellow
+                    Write-Host ""
+                    Cleanup
+                    if (-not $isSFX) { Clear-Host; Write-Host "`n Thank you for using Universal Intel Wi-Fi and Bluetooth Drivers Updater!`n" -ForegroundColor Cyan }
+                    exit 0
+                } catch {
+                    Write-Host " ERROR: Failed to update via PSGallery - $($_.Exception.Message)" -ForegroundColor Red
+                    Write-Host " Please update manually: Update-Script universal-intel-wifi-bt-driver-updater" -ForegroundColor Yellow
+                    Write-Host ""
+                    # Fall through to normal update flow
+                }
+            }
 
             if ($AutoMode) {
                 $continueChoice = "Y"
@@ -2028,23 +2047,7 @@ try {
 
     $successCount = 0
 
-    # Install Wi-Fi driver
-    if ($wifiNeedsUpdate -and $wifiInfo -and $wifiInfo.Block -and $wifiInfo.Block.Link) {
-        $wifiResult = Install-DriverWithFallback `
-            -PrimaryUrl       $wifiInfo.Block.Link `
-            -BackupUrl        $wifiInfo.Block.Backup `
-            -ExpectedHash     $wifiInfo.Block.SHA256 `
-            -DeviceInstanceId $wifiInfo.InstanceId `
-            -DeviceType       "Intel Wi-Fi" `
-            -VersionLabel     $wifiInfo.LatestVersion
-
-        if ($wifiResult) { $successCount++ }
-    } elseif ($wifiNeedsUpdate) {
-        Write-Host "`n ERROR: No download information found for Wi-Fi driver (DEV_$($wifiInfo.DEV))." -ForegroundColor Red
-        Write-Host " Please check versioned release files (intel-wifi-<version>.txt in archive-wifi release)." -ForegroundColor Yellow
-    }
-
-    # Install Bluetooth driver
+    # Install Bluetooth driver first (does not affect network)
     if ($btNeedsUpdate -and $btInfo -and $btInfo.Block -and $btInfo.Block.Link) {
         $btResult = Install-DriverWithFallback `
             -PrimaryUrl      $btInfo.Block.Link `
@@ -2058,6 +2061,22 @@ try {
     } elseif ($btNeedsUpdate) {
         Write-Host "`n ERROR: No download information found for Bluetooth driver (ID: $($btInfo.PID), Type: $($btInfo.Type))." -ForegroundColor Red
         Write-Host " Please check versioned release files (intel-bt-<version>_pid<PID>.txt or intel-bt-<version>_pci.txt in archive-bt release)." -ForegroundColor Yellow
+    }
+
+    # Install Wi-Fi driver second (may disconnect network, but no further downloads needed)
+    if ($wifiNeedsUpdate -and $wifiInfo -and $wifiInfo.Block -and $wifiInfo.Block.Link) {
+        $wifiResult = Install-DriverWithFallback `
+            -PrimaryUrl       $wifiInfo.Block.Link `
+            -BackupUrl        $wifiInfo.Block.Backup `
+            -ExpectedHash     $wifiInfo.Block.SHA256 `
+            -DeviceInstanceId $wifiInfo.InstanceId `
+            -DeviceType       "Intel Wi-Fi" `
+            -VersionLabel     $wifiInfo.LatestVersion
+
+        if ($wifiResult) { $successCount++ }
+    } elseif ($wifiNeedsUpdate) {
+        Write-Host "`n ERROR: No download information found for Wi-Fi driver (DEV_$($wifiInfo.DEV))." -ForegroundColor Red
+        Write-Host " Please check versioned release files (intel-wifi-<version>.txt in archive-wifi release)." -ForegroundColor Yellow
     }
 
     # Summary
