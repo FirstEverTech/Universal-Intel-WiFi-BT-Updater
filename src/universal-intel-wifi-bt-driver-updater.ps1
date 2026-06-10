@@ -1,5 +1,5 @@
 <#PSScriptInfo
-.VERSION 2026.04.0005
+.VERSION 2026.06.0006
 .GUID b3a72f1e-9c4d-4b8a-a1f2-83d5e6c09f12
 .NAME universal-intel-wifi-bt-driver-updater
 .AUTHOR Marcin Grygiel
@@ -13,20 +13,15 @@
 .REQUIREDSCRIPTS
 .EXTERNALSCRIPTDEPENDENCIES
 .RELEASENOTES
-v2026.04.0005 - Fixed critical bug: GitHub release asset URLs do not support query parameters.
-               Cache buster was appended to versioned .txt URLs causing 404 failures.
-               Added dedicated Get-ReleaseAssetContent function (no cache buster) for release assets.
-               Removed monolithic fallback (intel-wifi-drivers-download.txt / intel-bt-drivers-download.txt).
-               Updater now relies exclusively on versioned release assets for download info.
-               Removed unused parsers: Parse-WiFiDownloadList, Parse-BTDownloadList,
-               Get-WiFiBlockForDevice, Get-BTBlockForDevice.
-               Updated error messages - no longer reference removed monolithic files.
-v2026.03.0004 - Added versioned download file support using release assets.
-               Versioned files: intel-wifi-<version>.txt (archive-wifi release)
-                              intel-bt-<version>_pid<PID>.txt (archive-bt release)
-               Backward compatible with old intel-*-drivers-download.txt files.
-               Fixed block splitting issues in Wi-Fi download list parser (now uses regex to handle CRLF/LF).
-               Fixed variable name conflict with $PID in Bluetooth versioned function.
+v2026.06.0006 - Bug fixes: added missing USB BT PID 0043 (AX211) to supported device list.
+               Fixed incorrect Legacy flag shown for PCI Bluetooth devices when USB has a newer version.
+               Fixed PCI legacy fallback in scanner (dead code corrected in v4.5 scanner).
+               Author line in Show-FinalCredits aligned with Show-Header.
+v2026.06.0006 - Added support for Intel Bluetooth PCI Enumerator devices.
+               Detects PCI\VEN_8086&DEV_xxxx hardware IDs.
+               Uses shared CAB package (intel-bt-<version>_pci.cab) for all PCI devices.
+               Updated banner: version 2026.06.0006, author line, removed GitHub visit line.
+               All comments are now in English.
 #>
 
 <#
@@ -35,9 +30,9 @@ v2026.03.0004 - Added versioned download file support using release assets.
 
 .DESCRIPTION
     Automatically detects, downloads, and installs the latest Intel Wi-Fi (Wi-Fi 5/6/6E/7)
-    and Bluetooth drivers for your specific hardware. Compares installed driver versions
-    against the latest available release, then downloads and installs the correct CAB
-    driver package(s).
+    and Bluetooth drivers (both USB and PCI variants) for your specific hardware.
+    Compares installed driver versions against the latest available release,
+    then downloads and installs the correct CAB driver package(s).
 
     Security: full SHA-256 hash verification and Microsoft WHCP digital signature validation
     before installation. Automatic System Restore Point created before any changes.
@@ -184,7 +179,7 @@ if ($QuietMode) {
 # =============================================
 # SCRIPT VERSION
 # =============================================
-$ScriptVersion = "2026.04.0005"
+$ScriptVersion = "2026.06.0006"
 # =============================================
 
 $isSFX = $MyInvocation.ScriptName -like "$env:SystemRoot\Temp\universal-intel-wifi-bt-driver-updater*"
@@ -435,7 +430,7 @@ function Get-KeyAndUrlFromLine {
 }
 
 # =============================================
-# HEADER DISPLAY FUNCTION
+# HEADER DISPLAY FUNCTION (UPDATED BANNER)
 # =============================================
 function Show-Header {
     Clear-Host
@@ -453,24 +448,12 @@ function Show-Header {
 
     Write-Host "**                                                                       **" -ForegroundColor Gray -BackgroundColor DarkBlue
     Write-Host "**" -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "              Author: Marcin Grygiel / www.firstever.tech              " -NoNewline -ForegroundColor Green -BackgroundColor DarkBlue
+    Write-Host "           Author: Marcin Grygiel / GitHub.com/FirstEverTech           " -NoNewline -ForegroundColor Green -BackgroundColor DarkBlue
     Write-Host "**" -ForegroundColor Gray -BackgroundColor DarkBlue
     Write-Host "**                                                                       **" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "** --------------------------------------------------------------------- **" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "         This tool is not affiliated with Intel Corporation.           " -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "         Drivers are sourced from official Intel/WU servers.           " -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "         Use at your own risk.                                         " -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "** --------------------------------------------------------------------- **" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**                                                                       **" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "    Visit: GitHub.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater    " -NoNewline -ForegroundColor White -BackgroundColor DarkBlue
-    Write-Host "**" -ForegroundColor Gray -BackgroundColor DarkBlue
+    Write-Host "**           This tool is not affiliated with Intel Corporation.         **" -ForegroundColor Gray -BackgroundColor DarkBlue
+    Write-Host "**           Drivers are sourced from official Intel/WU servers.         **" -ForegroundColor Gray -BackgroundColor DarkBlue
+    Write-Host "**           Use at your own risk.                                       **" -ForegroundColor Gray -BackgroundColor DarkBlue
     Write-Host "**                                                                       **" -ForegroundColor Gray -BackgroundColor DarkBlue
     Write-Host "*************************************************************************/" -ForegroundColor Gray -BackgroundColor DarkBlue
     Write-Host ""
@@ -872,7 +855,7 @@ function Cleanup {
 # HARDWARE DETECTION FUNCTIONS
 # =============================================
 
-# Supported Intel Wi-Fi DEV IDs (PCI) - ADDED WITH NEW IDS FROM THE DATABASE
+# Supported Intel Wi-Fi DEV IDs (PCI)
 $supportedWiFiDEVs = @(
     # Wi-Fi 7 (BE)
     "272B", "A840", "A841", "E340", "E440",
@@ -884,8 +867,11 @@ $supportedWiFiDEVs = @(
     "2526", "30DC", "31DC", "9DF0", "A370"
 )
 
-# Supported Intel Bluetooth PID IDs (USB VID_8087)
-$supportedBTPIDs = @("0025", "0AAA", "0026", "0029", "0032", "0033", "0036", "0037", "0038")
+# Supported Intel Bluetooth USB PID IDs (VID_8087)
+$supportedBTPIDs = @("0025", "0AAA", "0026", "0029", "0032", "0033", "0043", "0036", "0037", "0038")
+
+# Supported Intel Bluetooth PCI DEV IDs (VEN_8086)
+$supportedBTDEVs = @("A876", "4D76", "E476", "E376")   # Intel Bluetooth PCI Enumerator
 
 function Get-IntelWiFiDevice {
     try {
@@ -916,24 +902,40 @@ function Get-IntelWiFiDevice {
 
 function Get-IntelBTDevice {
     try {
-        # Try Bluetooth class first
+        # First, scan Bluetooth class devices
         $devices = Get-PnpDevice -Class "Bluetooth" -ErrorAction SilentlyContinue |
             Where-Object { $_.Status -eq "OK" }
 
-        # Fall back to USB class if nothing found
+        # Fallback to scanning all devices if none found in Bluetooth class
         if (-not $devices -or $devices.Count -eq 0) {
             $devices = Get-PnpDevice -ErrorAction SilentlyContinue |
-                Where-Object { $_.Status -eq "OK" -and $_.HardwareID -like "*VID_8087*" }
+                Where-Object { $_.Status -eq "OK" -and ($_.HardwareID -like "*VID_8087*" -or $_.HardwareID -like "*VEN_8086*") }
         }
 
         foreach ($device in $devices) {
             foreach ($hwid in $device.HardwareID) {
+                # USB Bluetooth (VID_8087)
                 if ($hwid -match 'USB\\VID_8087&PID_([0-9A-F]{4})') {
                     $btPid = $matches[1].ToUpper()
                     if ($supportedBTPIDs -contains $btPid) {
-                        Write-DebugMessage "Found Intel BT device: PID=$btPid ($($device.FriendlyName))"
+                        Write-DebugMessage "Found Intel USB BT device: PID=$btPid ($($device.FriendlyName))"
                         return [PSCustomObject]@{
+                            Type         = "USB"
                             PID          = $btPid
+                            InstanceId   = $device.InstanceId
+                            FriendlyName = $device.FriendlyName
+                            HardwareID   = $hwid
+                        }
+                    }
+                }
+                # PCI Bluetooth (VEN_8086) - Intel Bluetooth PCI Enumerator
+                if ($hwid -match 'PCI\\VEN_8086&DEV_([0-9A-F]{4})') {
+                    $devId = $matches[1].ToUpper()
+                    if ($supportedBTDEVs -contains $devId) {
+                        Write-DebugMessage "Found Intel PCI BT device: DEV=$devId ($($device.FriendlyName))"
+                        return [PSCustomObject]@{
+                            Type         = "PCI"
+                            PID          = $devId   # store DEV as PID for unified handling
                             InstanceId   = $device.InstanceId
                             FriendlyName = $device.FriendlyName
                             HardwareID   = $hwid
@@ -1059,19 +1061,22 @@ function Get-VersionedWiFiDownloadInfo {
 }
 
 function Get-VersionedBTDownloadInfo {
-    param([string]$Version, [string]$BtPID)
+    param([string]$Version, [string]$BtPID, [string]$DeviceType = "USB")
 
-    $url = "https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel-bt-$Version`_pid$BtPID.txt"
-    Write-DebugMessage "Attempting to download versioned BT driver info (per-PID): $url"
+    if ($DeviceType -eq "PCI") {
+        # PCI devices use a shared CAB: intel-bt-<version>_pci.txt
+        $url = "https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel-bt-${Version}_pci.txt"
+        Write-DebugMessage "Attempting to download PCI BT driver info (shared): $url"
+    } else {
+        # USB devices use per-PID files
+        $url = "https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel-bt-${Version}_pid${BtPID}.txt"
+        Write-DebugMessage "Attempting to download versioned BT driver info (per-PID): $url"
+    }
+
     $content = Get-ReleaseAssetContent -Url $url
     if (-not $content) {
-        $url = "https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/download/archive-bt/intel-bt-$Version.txt"
-        Write-DebugMessage "Per-PID file not found, trying generic versioned BT file: $url"
-        $content = Get-ReleaseAssetContent -Url $url
-        if (-not $content) {
-            Write-DebugMessage "Versioned BT file not found for version $Version"
-            return $null
-        }
+        Write-DebugMessage "Versioned BT file not found for $DeviceType (ID: $BtPID, version $Version)"
+        return $null
     }
 
     $lines = $content -split "`r?`n" | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne "" }
@@ -1089,7 +1094,7 @@ function Get-VersionedBTDownloadInfo {
     }
 
     if ($info.SHA256 -and $info.Link) {
-        Write-DebugMessage "Versioned BT download info loaded for version $Version (PID $BtPID)"
+        Write-DebugMessage "Versioned BT download info loaded for $DeviceType (ID: $BtPID) version $Version"
         return $info
     } else {
         Write-DebugMessage "Versioned BT file missing required fields SHA256 or Link"
@@ -1101,7 +1106,6 @@ function Get-VersionedBTDownloadInfo {
 # DATA PARSING FUNCTIONS (for .md files)
 # =============================================
 
-# IMPROVED PARSE FUNCTION (4 columns)
 function Parse-WiFiLatestMd {
     param([string]$Content)
 
@@ -1126,7 +1130,6 @@ function Parse-WiFiLatestMd {
                 $models   = $matches[3].Trim()
                 $gen      = $matches[4].Trim()
 
-                # Optional per-device columns 5 & 6: Latest Version | Release Date
                 $deviceVersion = $null
                 $deviceDate    = $null
                 if ($line -match '^\|\s*DEV_[A-F0-9]{4}\s*\|\s*.+?\s*\|\s*.+?\s*\|\s*.+?\s*\|\s*([0-9][0-9.]+)\s*\|\s*(.+?)\s*\|') {
@@ -1158,7 +1161,7 @@ function Parse-BTLatestMd {
     $result = @{
         LatestVersion = $null
         ReleaseDate   = $null
-        Devices       = @{}   # PID (4 hex) -> @{ Chipset, Generation, Bluetooth, LatestVersion, ReleaseDate }
+        Devices       = @{}   # Key can be USB PID or PCI DEV (both 4-hex)
     }
 
     try {
@@ -1173,7 +1176,7 @@ function Parse-BTLatestMd {
             } elseif ($line -match '^Release Date\s*=\s*(.+)') {
                 $result.ReleaseDate = $matches[1].Trim()
             } elseif ($line -match '^\|\s*([0-9A-Fa-f]{4})\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|') {
-                $btPid   = $matches[1].ToUpper()
+                $btId    = $matches[1].ToUpper()
                 $chipset = $matches[2].Trim()
                 $gen     = $matches[3].Trim()
                 $bt      = $matches[4].Trim()
@@ -1183,17 +1186,17 @@ function Parse-BTLatestMd {
                 if ($line -match '^\|\s*[0-9A-Fa-f]{4}\s*\|\s*.+?\s*\|\s*.+?\s*\|\s*.+?\s*\|\s*([0-9][0-9.]+)\s*\|\s*(.+?)\s*\|') {
                     $deviceVersion = $matches[1].Trim()
                     $deviceDate    = $matches[2].Trim()
-                    Write-DebugMessage "BT per-device version: $btPid -> $deviceVersion ($deviceDate)"
+                    Write-DebugMessage "BT per-device version: $btId -> $deviceVersion ($deviceDate)"
                 }
 
-                $result.Devices[$btPid] = @{
+                $result.Devices[$btId] = @{
                     Chipset       = $chipset
                     Generation    = $gen
                     Bluetooth     = $bt
                     LatestVersion = $deviceVersion
                     ReleaseDate   = $deviceDate
                 }
-                Write-DebugMessage "BT device parsed: $btPid -> $chipset BT $bt"
+                Write-DebugMessage "BT device parsed: $btId -> $chipset BT $bt"
             }
         }
     } catch {
@@ -1484,24 +1487,12 @@ function Show-FinalCredits {
 
     Write-Host "**                                                                       **" -ForegroundColor Gray -BackgroundColor DarkBlue
     Write-Host "**" -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "              Author: Marcin Grygiel / www.firstever.tech              " -NoNewline -ForegroundColor Green -BackgroundColor DarkBlue
+    Write-Host "           Author: Marcin Grygiel / GitHub.com/FirstEverTech           " -NoNewline -ForegroundColor Green -BackgroundColor DarkBlue
     Write-Host "**" -ForegroundColor Gray -BackgroundColor DarkBlue
     Write-Host "**                                                                       **" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "** --------------------------------------------------------------------- **" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "         This tool is not affiliated with Intel Corporation.           " -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "         Drivers are sourced from official Intel/WU servers.           " -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "         Use at your own risk.                                         " -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "** --------------------------------------------------------------------- **" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**                                                                       **" -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "**" -NoNewline -ForegroundColor Gray -BackgroundColor DarkBlue
-    Write-Host "  GitHub: FirstEverTech/Universal-Intel-WiFi-BT-Updater               " -NoNewline -ForegroundColor White -BackgroundColor DarkBlue
-    Write-Host "**" -ForegroundColor Gray -BackgroundColor DarkBlue
+    Write-Host "**           This tool is not affiliated with Intel Corporation.         **" -ForegroundColor Gray -BackgroundColor DarkBlue
+    Write-Host "**           Drivers are sourced from official Intel/WU servers.         **" -ForegroundColor Gray -BackgroundColor DarkBlue
+    Write-Host "**           Use at your own risk.                                       **" -ForegroundColor Gray -BackgroundColor DarkBlue
     Write-Host "**                                                                       **" -ForegroundColor Gray -BackgroundColor DarkBlue
     Write-Host "*************************************************************************/" -ForegroundColor Gray -BackgroundColor DarkBlue
     Write-Host ""
@@ -1636,6 +1627,7 @@ try {
     if ($totalFound -eq 0) {
         Write-Host " No supported Intel Wi-Fi or Bluetooth devices found." -ForegroundColor Yellow
         Write-Host " Supported: Wi-Fi 5 (AC) / Wi-Fi 6 (AX) / Wi-Fi 6E (AXE) / Wi-Fi 7 (BE)" -ForegroundColor Gray
+        Write-Host " Supported Bluetooth: USB (PID 0025,0AAA,0026,0029,0032,0033,0036,0037,0038) and PCI (DEV A876,4D76,E476,E376)" -ForegroundColor Gray
         Cleanup
         if (-not $AutoMode) {
             Write-Host "`n Press any key to continue..."
@@ -1738,9 +1730,10 @@ try {
     }
 
     if ($btDevice -and $btData) {
-        $pidEntry = $btData.Devices[$btDevice.PID]
+        $btId = $btDevice.PID   # For USB this is PID, for PCI this is DEV (both 4-hex)
+        $pidEntry = $btData.Devices[$btId]
         if ($pidEntry) {
-            Write-Host " Found compatible device: Intel Wireless Bluetooth (PID: $($btDevice.PID))" -ForegroundColor Green
+            Write-Host " Found compatible device: Intel Wireless Bluetooth ($($btDevice.Type) - ID: $btId)" -ForegroundColor Green
             $btCurrentVersion = Get-CurrentDriverVersion -DeviceInstanceId $btDevice.InstanceId
 
             # Determine target version and date for this device
@@ -1752,12 +1745,12 @@ try {
                 $btDeviceDate    = if ($pidEntry.ReleaseDate) { $pidEntry.ReleaseDate } else { $btData.ReleaseDate }
             }
 
-            $btIsLegacy = ($btDeviceVersion -ne $btData.LatestVersion)
+            $btIsLegacy = ($btDeviceVersion -ne $btData.LatestVersion) -and ($btDevice.Type -eq "USB")
 
-            # Try to get versioned download info (with PID)
+            # Try to get versioned download info (use DeviceType to select correct file)
             $btDownloadBlock = $null
             if ($btDeviceVersion) {
-                $versionedInfo = Get-VersionedBTDownloadInfo -Version $btDeviceVersion -BtPID $btDevice.PID
+                $versionedInfo = Get-VersionedBTDownloadInfo -Version $btDeviceVersion -BtPID $btId -DeviceType $btDevice.Type
                 if ($versionedInfo) {
                     $btDownloadBlock = @{
                         HWIDs   = [System.Collections.Generic.List[string]]::new()
@@ -1768,17 +1761,17 @@ try {
                         Date    = $versionedInfo.Date
                     }
                     $btDownloadBlock.HWIDs.Add($btDevice.HardwareID)
-                    Write-DebugMessage "Using versioned BT download info for version $btDeviceVersion, PID $($btDevice.PID)"
+                    Write-DebugMessage "Using versioned BT download info for $($btDevice.Type) (ID: $btId) version $btDeviceVersion"
                 }
             }
 
-            # If versioned info not available, log error
             if (-not $btDownloadBlock) {
-                Write-DebugMessage "Versioned BT download info not found for version $btDeviceVersion (PID $($btDevice.PID))"
+                Write-DebugMessage "Versioned BT download info not found for $($btDevice.Type) ID $btId version $btDeviceVersion"
             }
 
             $btInfo = @{
-                PID                 = $btDevice.PID
+                PID                 = $btId
+                Type                = $btDevice.Type
                 InstanceId          = $btDevice.InstanceId
                 Chipset             = $pidEntry.Chipset
                 Generation          = $pidEntry.Generation
@@ -1791,7 +1784,7 @@ try {
                 Block               = $btDownloadBlock
             }
         } else {
-            Write-Host " [WARNING] Bluetooth PID $($btDevice.PID) not found in database." -ForegroundColor Yellow
+            Write-Host " [WARNING] Bluetooth $($btDevice.Type) ID $btId not found in database." -ForegroundColor Yellow
         }
     }
 
@@ -1862,9 +1855,10 @@ try {
         if ($wifiInfo) {
             Write-Host " Chipset: Intel $($btInfo.Generation) $($btInfo.Chipset)" -ForegroundColor White
         } else {
-            Write-Host " Chipset: Intel Standalone USB Bluetooth Adapter" -ForegroundColor White
+            Write-Host " Chipset: Intel Standalone Bluetooth Adapter ($($btInfo.Type))" -ForegroundColor White
         }
         Write-Host " Device: Intel Wireless Bluetooth $($btInfo.Bluetooth)" -ForegroundColor Gray
+        Write-Host " Interface: $($btInfo.Type)" -ForegroundColor Gray
 
         if ($btInfo.IsLegacy) {
             Write-Host " [LEGACY] Support ended - last available version: $($btInfo.LatestVersion) (current active: $($btInfo.GlobalLatestVersion))" -ForegroundColor DarkYellow
@@ -2057,13 +2051,13 @@ try {
             -BackupUrl       $btInfo.Block.Backup `
             -ExpectedHash    $btInfo.Block.SHA256 `
             -DeviceInstanceId $btInfo.InstanceId `
-            -DeviceType      "Intel Bluetooth" `
+            -DeviceType      "Intel Bluetooth ($($btInfo.Type))" `
             -VersionLabel    $btInfo.LatestVersion
 
         if ($btResult) { $successCount++ }
     } elseif ($btNeedsUpdate) {
-        Write-Host "`n ERROR: No download information found for Bluetooth driver (PID: $($btInfo.PID))." -ForegroundColor Red
-        Write-Host " Please check versioned release files (intel-bt-<version>_pid<PID>.txt in archive-bt release)." -ForegroundColor Yellow
+        Write-Host "`n ERROR: No download information found for Bluetooth driver (ID: $($btInfo.PID), Type: $($btInfo.Type))." -ForegroundColor Red
+        Write-Host " Please check versioned release files (intel-bt-<version>_pid<PID>.txt or intel-bt-<version>_pci.txt in archive-bt release)." -ForegroundColor Yellow
     }
 
     # Summary
