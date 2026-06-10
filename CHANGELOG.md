@@ -7,6 +7,54 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2026.06.0007] - 2026-06-10
+
+### Added
+- **PSGallery Self‑Update Mechanism**: Script now updates itself using `Update-Script -Force` when installed from PowerShell Gallery.
+- **Installation Order Changed**: Bluetooth drivers are installed before Wi‑Fi to prevent network disconnection from interrupting driver downloads.
+
+### Fixed
+- Fixed an issue where a dual driver update (Wi‑Fi + Bluetooth) would fail to download the Bluetooth CAB after the Wi‑Fi driver disconnected the network.
+
+Full details: [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.06.0007)
+
+---
+
+## [2026.06.0006] - 2026-06-09
+
+### Added
+- **New Hardware Support**: Intel Bluetooth PCI Enumerator devices (`PCI\VEN_8086&DEV_A876`, `4D76`, `E476`, `E376`) – also known as Intel(R) Bluetooth(R) PCI Enumerator.
+- **Unified Driver Management**: Detects both USB (`VID_8087&PID_xxxx`) and PCI (`VEN_8086&DEV_xxxx`) Bluetooth, fetches appropriate CAB.
+- **Shared PCI CAB**: All PCI devices use a single CAB file (`intel-bt-<version>_pci.cab`), reducing download size.
+- **Updated Banner**: New tool version, revised author line, removed redundant GitHub link, improved layout.
+- **Code Cleanup**: All comments now in English.
+
+### Fixed
+- **Missing PID `0043`**: Intel AX211 USB Bluetooth (PID `0043`) was absent from the supported device list; affected users received no update offer.
+- **False Legacy flag for PCI Bluetooth**: PCI devices (`DEV_A876/4D76/E476/E376`) were incorrectly shown as `[LEGACY]` when USB version was newer; PCI and USB now use independent version tracks.
+- **Scanner dead code (v4.5)**: PCI legacy fallback in `BT-Platform-Scanner` was unreachable; known PCI DEVs now correctly fall back to last known version from previous MD.
+
+### Compatibility
+- Fully backward compatible with older `intel-bt-driver-latest.md` that only contains USB devices.
+
+Full details: [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.06.0006)
+
+---
+
+## [2026.04.0005] - 2026-04-15
+
+### Added
+- **Dedicated Release Asset Downloader**: New `Get-ReleaseAssetContent` function uses `WebClient.DownloadString()` (with proper redirect handling) instead of `Invoke-WebRequest`, ensuring raw file content is always retrieved correctly.
+- **Removed Monolithic Fallback**: `intel-wifi-drivers-download.txt` and `intel-bt-drivers-download.txt` are no longer used or required; updater now relies exclusively on versioned release assets.
+- **Cleaner Codebase**: Removed unused parsers (`Parse-WiFiDownloadList`, `Parse-BTDownloadList`, `Get-WiFiBlockForDevice`, `Get-BTBlockForDevice`) and associated variables.
+
+### Fixed
+- **Critical Bug**: GitHub release asset URLs do not support query parameters; the cache buster appended to versioned `.txt` URLs caused silent download failures, preventing driver installation even when all files were correctly in place.
+
+Full details: [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.04.0005)
+
+---
+
 ## [2026.03.0004] - 2026-03-26
 
 ### Added
