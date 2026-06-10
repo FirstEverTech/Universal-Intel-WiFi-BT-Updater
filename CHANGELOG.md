@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [2026.06.0007] - 2026-06-10
+## [2026.06.0007] - 2026-06-xx
 
 ### Added
 - **PSGallery Self‑Update Mechanism**: Script now updates itself using `Update-Script -Force` when installed from PowerShell Gallery.
@@ -20,7 +20,7 @@ Full details: [Release Notes](https://github.com/FirstEverTech/Universal-Intel-W
 
 ---
 
-## [2026.06.0006] - 2026-06-09
+## [2026.06.0006] - 2026-06-10
 
 ### Added
 - **New Hardware Support**: Intel Bluetooth PCI Enumerator devices (`PCI\VEN_8086&DEV_A876`, `4D76`, `E476`, `E376`) – also known as Intel(R) Bluetooth(R) PCI Enumerator.
