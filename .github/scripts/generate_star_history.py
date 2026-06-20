@@ -28,10 +28,10 @@ def fetch_stars(repo):
         page += 1
     return sorted(dates)
 
+# ---------- KOLORY (dostosowane) ----------
 BLUE     = "#58a6ff"
 LINE     = "#1f6feb"
-GRID_MAJ = "#444444"
-GRID_MIN = "#2a2a2a"
+GRID_MAJ = "#283d58"   # nowy kolor siatki
 
 def x_axis_config(start: datetime, end: datetime):
     """Returns (locator, formatter, xlabel) based on span."""
@@ -39,7 +39,6 @@ def x_axis_config(start: datetime, end: datetime):
     years = days / 365.25
 
     if days < 32:
-        # < 1 month: only start and end labels
         loc = mdates.FixedLocator(mdates.date2num([start, end]))
         fmt = mdates.DateFormatter("%b '%y")
         lbl = "Date"
@@ -48,11 +47,11 @@ def x_axis_config(start: datetime, end: datetime):
         fmt = mdates.DateFormatter("%b '%y")
         lbl = "Month"
     elif years < 3:
-        loc = mdates.MonthLocator(bymonth=[1, 4, 7, 10])   # quarterly
+        loc = mdates.MonthLocator(bymonth=[1, 4, 7, 10])
         fmt = mdates.DateFormatter("%b '%y")
         lbl = "Quarter"
     elif years < 6:
-        loc = mdates.MonthLocator(bymonth=[1, 7])           # every 6 months
+        loc = mdates.MonthLocator(bymonth=[1, 7])
         fmt = mdates.DateFormatter("%b '%y")
         lbl = "Half-year"
     elif years < 10:
@@ -88,21 +87,25 @@ def generate(dates, repo, out):
     y31 = np.interp(x31, date_nums, counts)
     ax.scatter(mdates.num2date(x31), y31, color=BLUE, s=30, zorder=4, linewidths=0)
 
-    # X limits — no empty right margin
+    # ---------- MARGINESY, ŻEBY KROPKI NIE BYŁY UCINANE ----------
+    ax.margins(x=0.02, y=0.05)
+    ax.set_ylim(bottom=-0.5)   # zapas na dole
+
+    # Oś X – ustawiamy zakres ręcznie (bez marginesu po prawej)
     ax.set_xlim(x_start, x_end)
 
-    # Y: 8 lines, 0 at bottom, nice max at top
+    # Y: 8 linii, 0 na dole, ładny maksymalny zakres
     NUM_Y_LINES = 8
     nice_max = max(math.ceil(max(counts) / (NUM_Y_LINES - 1)) * (NUM_Y_LINES - 1), NUM_Y_LINES - 1)
     ax.set_ylim(0, nice_max)
     ax.set_yticks(np.linspace(0, nice_max, NUM_Y_LINES))
 
-    # grid
+    # ---------- SIATKA (kropkowana, nowy kolor) ----------
     ax.set_axisbelow(True)
     loc, fmt, x_lbl = x_axis_config(x_start, x_end)
     ax.xaxis.set_major_locator(loc)
     ax.xaxis.set_major_formatter(fmt)
-    ax.grid(True, which="major", color=GRID_MAJ, linewidth=0.7)
+    ax.grid(True, which="major", color=GRID_MAJ, linewidth=0.7, linestyle=':')
 
     # tick styling
     ax.tick_params(axis="both", which="both", colors=BLUE, labelsize=7)
