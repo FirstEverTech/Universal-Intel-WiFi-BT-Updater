@@ -91,10 +91,11 @@ def generate(dates, repo, out):
     # X limits — no empty right margin
     ax.set_xlim(x_start, x_end)
 
-    # Y: 10 lines, 0 at bottom, nice max at top
-    nice_max = max(math.ceil(max(counts) / 9) * 9, 9)
+    # Y: 8 lines, 0 at bottom, nice max at top
+    NUM_Y_LINES = 8
+    nice_max = max(math.ceil(max(counts) / (NUM_Y_LINES - 1)) * (NUM_Y_LINES - 1), NUM_Y_LINES - 1)
     ax.set_ylim(0, nice_max)
-    ax.set_yticks(np.linspace(0, nice_max, 10))
+    ax.set_yticks(np.linspace(0, nice_max, NUM_Y_LINES))
 
     # grid
     ax.set_axisbelow(True)
