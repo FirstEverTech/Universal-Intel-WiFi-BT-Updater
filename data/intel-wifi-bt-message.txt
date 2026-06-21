@@ -1,30 +1,55 @@
-[Magenta]
-[Magenta] SUPPORT THIS PROJECT
-[Magenta] ====================
+[Cyan]
+[Cyan] SUPPORT DEVELOPMENT
+[Cyan] ===================
 
- This project is maintained in my free time.
- Your support ensures regular updates and compatibility.
+ Universal Intel Wi-Fi & Bluetooth Updater provides automated hardware
+ detection and Intel wireless driver deployment for Intel Wi-Fi and BT
+ adapters across supported Windows systems.
 
- Support options:
+ The wireless driver database is continuously updated to ensure accurate
+ device recognition and compatibility across modern and legacy Windows
+ installations.
 
+ If this tool saved you time, improved wireless connectivity, or helped
+ keep older hardware updated, please consider supporting development.
+
+[Cyan]
+[Cyan] SUPPORTERS
+[Cyan] ==========
+
+ If you are a company or IT organization using this tool in production
+ environments, you can support development and optionally have your
+ company listed in this section as a supporter.
+
+ This can include:
+ - Company name mention in in-app credits section
+ - Optional listing in GitHub README (Sponsors section)
+ - Optional acknowledgment in GitHub release notes
+
+[Green] - Become a Patron:[Yellow] tinyurl.com/fet-patron[Gray] - press [Black,Gray][T][Gray,Black] key
 [Green] - PayPal Donation:[Yellow] tinyurl.com/fet-paypal[Gray] - press [Black,Gray][P][Gray,Black] key
 [Green] - Buy Me a Coffee:[Yellow] tinyurl.com/fet-coffee[Gray] - press [Black,Gray][C][Gray,Black] key
 [Green] - GitHub Sponsors:[Yellow] tinyurl.com/fet-github[Gray] - press [Black,Gray][G][Gray,Black] key
 
- If this project helped you, please consider:
+[Cyan]
+[Cyan] PROJECT IMPACT
+[Cyan] ==============
 
-[Green] - Giving it a STAR on GitHub
-[Green] - Sharing with friends and colleagues
-[Green] - Reporting issues or suggesting features
-[Green] - Supporting development financially
+[Green] - 31,000+ downloads worldwide
+[Green] - Intel Wi-Fi & Bluetooth driver coverage for modern systems
+[Green] - Open-source and free to use
+[Green] - Continuously maintained wireless driver database
 
-[Magenta]
-[Magenta] CAREER OPPORTUNITY
-[Magenta] ==================
+[Cyan]
+[Cyan] CAREER OPPORTUNITY
+[Cyan] ==================
 
- I'm currently seeking new challenges where I can apply my expertise
- in solving complex IT infrastructure problems. If your organization
- struggles with system compatibility, automation, or tooling gaps,
- let's discuss how I can help.
+ I specialize in Windows deployment, driver automation, hardware
+ compatibility, Microsoft technologies, infrastructure analysis,
+ and custom IT tooling.
 
-[Green] - Connect with me:[Yellow] linkedin.com/in/marcin-grygiel[Gray] - press [Black,Gray][L][Gray,Black] key
+ If your organization faces automation, deployment, device management,
+ or wireless driver management challenges, let's discuss how I can help.
+
+[Green] - Business Contact:[Yellow] firstever.tech/contact[Gray] - press [Black,Gray][F][Gray,Black] key
+[Green] - LinkedIn Profile:[Yellow] tinyurl.com/fet-linked[Gray] - press [Black,Gray][L][Gray,Black] key
