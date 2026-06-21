@@ -6,9 +6,8 @@
  detection and Intel wireless driver deployment for Intel Wi-Fi and BT
  adapters across supported Windows systems.
 
- The wireless driver database is continuously updated to ensure accurate
- device recognition and compatibility across modern and legacy Windows
- installations.
+ The wireless driver database is continuously updated for accurate device
+ recognition and compatibility across modern and legacy Windows systems.
 
  If this tool saved you time, improved wireless connectivity, or helped
  keep older hardware updated, please consider supporting development.
