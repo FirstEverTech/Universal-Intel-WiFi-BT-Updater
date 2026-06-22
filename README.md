@@ -43,6 +43,7 @@ Intel distributes Wi-Fi and Bluetooth drivers as large CAB packages — but your
 For detailed documentation and guides, see:  
 → **[Deploying Universal Intel Wi-Fi and BT Drivers Updater via MDM](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/MDM-DEPLOYMENT-GUIDE_EN_2026.md)**  
 → **[How to verify the latest drivers yourself](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/HOW-TO-VERIFY-DRIVERS_EN_2026.md)**
+→ **[Intel Driver Versioning](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/INTEL-DRIVER-VERSIONING_EN_2026.md)**
 
 ⭐ If this project helped you, please click the "Star" button at the top of this page on GitHub.  
 👉 [Share your feedback!](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/discussions)
@@ -526,6 +527,8 @@ universal-intel-wifi-bt-driver-updater
 `docs/` - Documentation
 - [HOW-TO-VERIFY-DRIVERS_EN_2026.md](docs/HOW-TO-VERIFY-DRIVERS_EN_2026.md) - Manual Driver version verification guide (English)
 - [HOW-TO-VERIFY-DRIVERS_PL_2026.md](docs/HOW-TO-VERIFY-DRIVERS_PL_2026.md) - Manual Driver version verification guide (Polish)
+- [INTEL-DRIVER-VERSIONING_EN_2026.md](docs/INTEL-DRIVER-VERSIONING_EN_2026.md) - Intel Driver Versioning (English)
+- [INTEL-DRIVER-VERSIONING_PL_2026.md](docs/INTEL-DRIVER-VERSIONING_PL_2026.md) - Intel Driver Versioning (Polish)
 - [MDM-DEPLOYMENT-GUIDE_EN_2026.md](docs/MDM-DEPLOYMENT-GUIDE_EN_2026.md) - Deploying the Tool via MDM (English)
 - [MDM-DEPLOYMENT-GUIDE_PL_2026.md](docs/MDM-DEPLOYMENT-GUIDE_PL_2026.md) - Deploying the Tool via MDM (Polish)
 - [NEW-RELEASE-GUIDE_EN_2026.md](docs/NEW-RELEASE-GUIDE_EN_2026.md) - New Release Guide (English)
