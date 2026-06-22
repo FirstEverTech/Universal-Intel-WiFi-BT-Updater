@@ -62,7 +62,9 @@ If this tool saved you time, improved device identification, or helped keep olde
 *No sponsors yet — [be the first and add your company ad!](https://www.patreon.com/FirstEverTech)*
 
 ## ❤️ Supporters
-*No supporters yet — [be the first!](https://www.patreon.com/FirstEverTech)*
+
+<!-- SUPPORTERS_START -->
+<!-- SUPPORTERS_END -->
 
 ## ⭐ Stars
 If this project helped you, please click the "Star" button at the top of this page on GitHub.  
