@@ -42,7 +42,7 @@ Intel distributes Wi-Fi and Bluetooth drivers as large CAB packages — but your
 
 For detailed documentation and guides, see:  
 → **[Deploying Universal Intel Wi-Fi and BT Drivers Updater via MDM](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/MDM-DEPLOYMENT-GUIDE_EN_2026.md)**  
-→ **[How to verify the latest drivers yourself](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/HOW-TO-VERIFY-DRIVERS_EN_2026.md)**
+→ **[How to verify the latest drivers yourself](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/HOW-TO-VERIFY-DRIVERS_EN_2026.md)**  
 → **[Intel Driver Versioning](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/INTEL-DRIVER-VERSIONING_EN_2026.md)**
 
 ⭐ If this project helped you, please click the "Star" button at the top of this page on GitHub.  
