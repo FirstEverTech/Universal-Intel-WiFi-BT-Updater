@@ -54,12 +54,12 @@ For detailed documentation and guides, see:
 **Universal Intel Wi-Fi and Bluetooth Drivers Updater** is free and open-source — maintained by a single developer.  
 The hardware ID database requires constant updates, compatibility testing across hardware generations is ongoing, and new features are always in development.
 
-[![Patreon](https://img.shields.io/badge/Patreon-Patron-F96854?style=for-the-badge&logo=patreon)](https://www.patreon.com/FirstEverTech)[![GitHub Sponsors](https://img.shields.io/badge/GitHub-Sponsor-EA4AAA?style=for-the-badge&logo=githubsponsors)](https://github.com/sponsors/FirstEverTech)[![PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=48VGDSCNJAPTJ)[![Buy Me a Coffee](https://img.shields.io/badge/Coffee-Donate-FFDD00?style=for-the-badge&logo=buymeacoffee)](https://buymeacoffee.com/firstevertech)[![Ko-fi](https://img.shields.io/badge/Ko--fi-Donate-FF5E5B?style=for-the-badge&logo=kofi)](https://ko-fi.com/firstever)
+[![Patreon](https://img.shields.io/badge/Patreon-Patron-F96854?style=for-the-badge&logo=patreon)](https://www.patreon.com/c/firstevertech/membership)[![GitHub Sponsors](https://img.shields.io/badge/GitHub-Sponsor-EA4AAA?style=for-the-badge&logo=githubsponsors)](https://github.com/sponsors/FirstEverTech)[![PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=48VGDSCNJAPTJ)[![Buy Me a Coffee](https://img.shields.io/badge/Coffee-Donate-FFDD00?style=for-the-badge&logo=buymeacoffee)](https://buymeacoffee.com/firstevertech)[![Ko-fi](https://img.shields.io/badge/Ko--fi-Donate-FF5E5B?style=for-the-badge&logo=kofi)](https://ko-fi.com/firstever)
 
 If this tool saved you time, improved device identification, or helped keep older hardware running — consider supporting development. 🎯 **[Follow on Patreon for free](https://www.patreon.com/FirstEverTech)** — stay updated on new releases and development progress.  
 
 ## 🏢 Sponsors
-*No sponsors yet — [be the first and add your company ad!](https://www.patreon.com/FirstEverTech)*
+*No sponsors yet — [be the first and add your company ad!](https://www.patreon.com/c/firstevertech/membership)*
 
 ## ❤️ Supporters
 
