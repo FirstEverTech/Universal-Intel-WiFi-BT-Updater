@@ -72,7 +72,7 @@ Your name could be here too. Every bit helps cover development costs and ensures
 ## ⭐ Stars
 If this project helped you, please click the "Star" button at the top of this page on GitHub.  
 
-![Star History](assets/star-history.svg)
+![Star History](assets/stars-graph.svg)
 
 ## 🌐 Community & Distribution
 - Official threads on the following forums: **[TechPowerUp](https://www.techpowerup.com/forums/threads/tool-universal-intel-wi-fi-and-bluetooth-drivers-updater.342724/#post-5671700)**, **[Win-Raid](https://winraid.level1techs.com/t/tool-universal-intel-wifi-bluetooth-drivers-updater/112495)**, **[Station-Drivers](https://www.station-drivers.com/index.php/en/forum/intel-wireless-bluetooth-drivers/971-universal-intel-wi-fi-and-bluetooth-drivers-updater)**, **[ElevenForum](https://www.elevenforum.com/t/universal-intel-chipset-device-updater.41790/)** and **[WinClub](https://winclub.pl/topic/50298-universal-intel-wi-fi-and-bluetooth-drivers-updater/)**.
