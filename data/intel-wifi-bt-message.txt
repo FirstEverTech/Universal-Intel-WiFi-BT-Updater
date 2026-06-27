@@ -25,7 +25,7 @@
  - Optional listing in GitHub README (Sponsors section)
  - Optional acknowledgment in GitHub release notes
 
-[Green] - Become a Patron:[Yellow] tinyurl.com/fet-patron[Gray] - press [Black,Gray][T][Gray,Black] key
+[Green] - Support Patreon:[Yellow] tinyurl.com/fet-patron[Gray] - press [Black,Gray][T][Gray,Black] key
 [Green] - PayPal Donation:[Yellow] tinyurl.com/fet-paypal[Gray] - press [Black,Gray][P][Gray,Black] key
 [Green] - Buy Me a Coffee:[Yellow] tinyurl.com/fet-coffee[Gray] - press [Black,Gray][C][Gray,Black] key
 [Green] - GitHub Sponsors:[Yellow] tinyurl.com/fet-github[Gray] - press [Black,Gray][G][Gray,Black] key
@@ -34,7 +34,7 @@
 [Cyan] PROJECT IMPACT
 [Cyan] ==============
 
-[Green] - 31,000+ downloads worldwide
+[Green] - 33,000+ downloads worldwide
 [Green] - Intel Wi-Fi & Bluetooth driver coverage for modern systems
 [Green] - Open-source and free to use
 [Green] - Continuously maintained wireless driver database
