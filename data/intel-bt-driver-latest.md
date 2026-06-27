@@ -1,7 +1,7 @@
 # Intel Wireless Bluetooth Drivers Latest
 
-Latest Version = 24.50.0.4  
-Release Date = 08/05/2026
+Latest Version = 24.40.10.8  
+Release Date = 08/06/2026
 
 ## Supported USB Devices
 
@@ -10,13 +10,13 @@ Release Date = 08/05/2026
 | 0038 | BE200 stepping  | Wi-Fi 7         | 5.4       | 24.50.0.4      | 08/05/2026   |
 | 0037 | BE202 / BE204   | Wi-Fi 7         | 5.4       | 24.50.0.4      | 08/05/2026   |
 | 0036 | BE200           | Wi-Fi 7         | 5.4       | 24.50.0.4      | 08/05/2026   |
-| 0033 | AX211           | Wi-Fi 6E (CNVi) | 5.3       | 24.40.10.3     | 28/04/2026   |
-| 0043 | AX211           | Wi-Fi 6E (CNVi) | 5.3       | 24.40.10.3     | 28/04/2026   |
-| 0032 | AX210           | Wi-Fi 6E        | 5.3       | 24.40.10.3     | 28/04/2026   |
+| 0033 | AX211           | Wi-Fi 6E (CNVi) | 5.3       | 24.40.10.8     | 08/06/2026   |
+| 0043 | AX211           | Wi-Fi 6E (CNVi) | 5.3       | 24.40.10.8     | 08/06/2026   |
+| 0032 | AX210           | Wi-Fi 6E        | 5.3       | 24.40.10.8     | 08/06/2026   |
 | 0029 | AX200           | Wi-Fi 6         | 5.2       | 24.10.0.4      | 11/10/2025   |
-| 0026 | AX201           | Wi-Fi 6 (CNVi)  | 5.2       | 24.40.10.3     | 28/04/2026   |
-| 0AAA | 9460 / 9560     | Wi-Fi 5         | 5.2       | 24.40.10.3     | 28/04/2026   |
-| 0025 | 9260            | Wi-Fi 5         | 5.2       | 24.40.10.3     | 28/04/2026   |
+| 0026 | AX201           | Wi-Fi 6 (CNVi)  | 5.2       | 24.40.10.8     | 08/06/2026   |
+| 0AAA | 9460 / 9560     | Wi-Fi 5         | 5.2       | 24.40.10.8     | 08/06/2026   |
+| 0025 | 9260            | Wi-Fi 5         | 5.2       | 24.40.10.8     | 08/06/2026   |
 
 ## Supported PCI Devices
 
@@ -48,4 +48,4 @@ If you believe a Bluetooth version is incorrect based on your HCI/LMP values, pl
 
 **Source:** [Universal Intel Wi-Fi & Bluetooth Drivers Updater](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater)
 **Project by:** [Marcin Grygiel](https://www.linkedin.com/in/marcin-grygiel/)
-**Last Update:** 17-06-2026
+**Last Update:** 27-06-2026
