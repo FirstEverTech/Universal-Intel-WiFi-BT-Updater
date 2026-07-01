@@ -1,5 +1,5 @@
 <#PSScriptInfo
-.VERSION 2026.06.0007
+.VERSION 2026.07.0008
 .GUID b3a72f1e-9c4d-4b8a-a1f2-83d5e6c09f12
 .NAME universal-intel-wifi-bt-driver-updater
 .AUTHOR Marcin Grygiel
@@ -13,9 +13,9 @@
 .REQUIREDSCRIPTS
 .EXTERNALSCRIPTDEPENDENCIES
 .RELEASENOTES
-v2026.06.0007 - Added PSGallery self-update (Update-Script) for seamless upgrades.
-               Changed installation order: Bluetooth first, then Wi-Fi to avoid network loss.
-               Updated version to 2026.06.0007.
+v2026.07.0008 - Configurable credits screen with external files (intel-wifi-bt-credits.txt, intel-wifi-bt-ads.txt)
+               - All comments converted to English
+               - Version bump to 2026.07.0008
 #>
 
 <#
@@ -173,7 +173,7 @@ if ($QuietMode) {
 # =============================================
 # SCRIPT VERSION
 # =============================================
-$ScriptVersion = "2026.06.0007"
+$ScriptVersion = "2026.07.0008"
 # =============================================
 
 $isSFX = $MyInvocation.ScriptName -like "$env:SystemRoot\Temp\universal-intel-wifi-bt-driver-updater*"
@@ -248,6 +248,8 @@ $githubArchiveBT   = "https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-U
 $wifiLatestUrl   = $githubBaseUrl + "intel-wifi-driver-latest.md"
 $btLatestUrl     = $githubBaseUrl + "intel-bt-driver-latest.md"
 $supportMessageUrl = $githubBaseUrl + "intel-wifi-bt-message.txt"
+$creditsMessageUrl = $githubBaseUrl + "intel-wifi-bt-credits.txt"
+$adsUrl            = $githubBaseUrl + "intel-wifi-bt-ads.txt"
 
 if ($Developer) {
     $wifiLatestUrl   = $githubBaseUrl + "intel-wifi-driver-dev.md"
@@ -412,7 +414,7 @@ function Get-KeyAndUrlFromLine {
     $colorPattern = '\[(?:' + (($validColors | ForEach-Object { [regex]::Escape($_) }) -join '|') + ')(?:,(?:' + (($validColors | ForEach-Object { [regex]::Escape($_) }) -join '|') + '))?\]'
     $cleanLine = $Line -replace $colorPattern, ''
 
-    if ($cleanLine -match 'press \[([A-Za-z])\]') {
+    if ($cleanLine -match 'press \[([A-Za-z0-9])\]') {
         $key = $matches[1]
         if ($cleanLine -match '(https?://)?([a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:/[^\s]*)?)') {
             $urlCandidate = $matches[0]
@@ -424,7 +426,7 @@ function Get-KeyAndUrlFromLine {
 }
 
 # =============================================
-# HEADER DISPLAY FUNCTION (UPDATED BANNER)
+# HEADER DISPLAY FUNCTION
 # =============================================
 function Show-Header {
     Clear-Host
@@ -580,7 +582,6 @@ function Show-Screen4 {
     Show-Header
     Write-Host " [SCREEN 4/4] DOWNLOAD AND INSTALLATION PROGRESS" -ForegroundColor Cyan
     Write-Host " ===============================================" -ForegroundColor Cyan
-#    Write-Host ""
 }
 
 # =============================================
@@ -1522,47 +1523,69 @@ function Show-FinalCredits {
     Write-Host " I hope this tool has been helpful in updating your system." -ForegroundColor Yellow
     Write-Host ""
 
+    # --- Dictionary to store key -> URL mappings ---
     $keyActions = @{}
 
+    # --- Load ad links from intel-wifi-bt-ads.txt (A-E keys) ---
     $cacheBuster = "?t=$(Get-Date -Format 'yyyyMMddHHmmss')"
     try {
-        $content = Invoke-WebRequest -Uri ($supportMessageUrl + $cacheBuster) -UseBasicParsing -ErrorAction Stop
-        $lines = $content.Content -split "`r?`n"
+        $adsContent = Invoke-WebRequest -Uri ($adsUrl + $cacheBuster) -UseBasicParsing -ErrorAction Stop
+        foreach ($adLine in ($adsContent.Content -split "`r?`n")) {
+            if ($adLine -match '^\s*([A-Ea-e])\s*=\s*(https?://\S+)\s*$') {
+                $adKey = $matches[1].ToUpper()
+                $keyActions[$adKey]              = $matches[2]
+                $keyActions[$adKey.ToLower()]    = $matches[2]
+            }
+        }
     } catch {
-        $lines = @(
-            "[Magenta]",
-            "[Magenta] SUPPORT THIS PROJECT",
-            "[Magenta] ====================",
-            "",
-            " This project is maintained in my free time.",
-            " Your support ensures regular updates and compatibility.",
-            "",
-            " Support options:",
-            "",
-            "[Green] - PayPal Donation:[Yellow] tinyurl.com/fet-paypal[Gray] - press [Black,Gray][P][Gray,Black] key",
-            "[Green] - Buy Me a Coffee:[Yellow] tinyurl.com/fet-coffee[Gray] - press [Black,Gray][C][Gray,Black] key",
-            "[Green] - GitHub Sponsors:[Yellow] tinyurl.com/fet-github[Gray] - press [Black,Gray][G][Gray,Black] key",
-            "",
-            " If this project helped you, please consider:",
-            "",
-            "[Green] - Giving it a STAR on GitHub",
-            "[Green] - Sharing with friends and colleagues",
-            "[Green] - Reporting issues or suggesting features",
-            "[Green] - Supporting development financially",
-            "",
-            "[Magenta]",
-            "[Magenta] CAREER OPPORTUNITY",
-            "[Magenta] ==================",
-            "",
-            " I'm currently seeking new challenges where I can apply my expertise",
-            " in solving complex IT infrastructure problems. If your organization",
-            " struggles with system compatibility, automation, or tooling gaps,",
-            " let's discuss how I can help.",
-            "",
-            "[Green] - Connect with me:[Yellow] linkedin.com/in/marcin-grygiel[Gray] - press [Black,Gray][L][Gray,Black] key"
-        )
+        # Ads file unavailable - A-E keys will simply exit (no action registered)
     }
 
+    # --- Load credits message (intel-wifi-bt-credits.txt) ---
+    # Fallback to intel-wifi-bt-message.txt for backward compatibility
+    try {
+        $content = Invoke-WebRequest -Uri ($creditsMessageUrl + $cacheBuster) -UseBasicParsing -ErrorAction Stop
+        $lines = $content.Content -split "`r?`n"
+    } catch {
+        try {
+            $content = Invoke-WebRequest -Uri ($supportMessageUrl + $cacheBuster) -UseBasicParsing -ErrorAction Stop
+            $lines = $content.Content -split "`r?`n"
+        } catch {
+            $lines = @(
+                "[Magenta]",
+                "[Magenta] SUPPORT THIS PROJECT",
+                "[Magenta] ====================",
+                "",
+                " This project is maintained in my free time.",
+                " Your support ensures regular updates and compatibility.",
+                "",
+                " Support options:",
+                "",
+                "[Green] - PayPal Donation:[Yellow] tinyurl.com/fet-paypal[Gray] - press [Black,Gray][P][Gray,Black] key",
+                "[Green] - Buy Me a Coffee:[Yellow] tinyurl.com/fet-coffee[Gray] - press [Black,Gray][C][Gray,Black] key",
+                "[Green] - GitHub Sponsors:[Yellow] tinyurl.com/fet-github[Gray] - press [Black,Gray][G][Gray,Black] key",
+                "",
+                " If this project helped you, please consider:",
+                "",
+                "[Green] - Giving it a STAR on GitHub",
+                "[Green] - Sharing with friends and colleagues",
+                "[Green] - Reporting issues or suggesting features",
+                "[Green] - Supporting development financially",
+                "",
+                "[Magenta]",
+                "[Magenta] CAREER OPPORTUNITY",
+                "[Magenta] ==================",
+                "",
+                " I specialize in Windows deployment, driver automation, hardware",
+                " compatibility, infrastructure analysis, and custom IT tooling.",
+                "",
+                "[Green] - Business Contact:[Yellow] firstever.tech/contact[Gray] - press [Black,Gray][F][Gray,Black] key",
+                "[Green] - LinkedIn Profile:[Yellow] tinyurl.com/fet-linked[Gray] - press [Black,Gray][L][Gray,Black] key"
+            )
+        }
+    }
+
+    # Display each line and collect key/URL information
     foreach ($line in $lines) {
         Write-ColorLine $line
         $keyInfo = Get-KeyAndUrlFromLine -Line $line
@@ -1576,30 +1599,35 @@ function Show-FinalCredits {
         }
     }
 
-    if ($AutoMode) { return }
+    # --- Handle key press ---
+    if ($AutoMode) {
+        return
+    } else {
+        Write-Host "`n Press " -NoNewline -ForegroundColor Gray
+        Write-Host "1" -NoNewline -ForegroundColor Yellow
+        Write-Host "=Patreon, " -NoNewline -ForegroundColor Gray
+        Write-Host "2" -NoNewline -ForegroundColor Yellow
+        Write-Host "=PayPal, " -NoNewline -ForegroundColor Gray
+        Write-Host "3" -NoNewline -ForegroundColor Yellow
+        Write-Host "=Coffee, " -NoNewline -ForegroundColor Gray
+        Write-Host "4" -NoNewline -ForegroundColor Yellow
+        Write-Host "=Ko-Fi, " -NoNewline -ForegroundColor Gray
+        Write-Host "5" -NoNewline -ForegroundColor Yellow
+        Write-Host "=GitHub, other key = Exit." -ForegroundColor Gray
 
-    Write-Host "`n Press " -NoNewline -ForegroundColor Gray
-    Write-Host "P" -NoNewline -ForegroundColor Yellow
-    Write-Host "=PayPal, " -NoNewline -ForegroundColor Gray
-    Write-Host "C" -NoNewline -ForegroundColor Yellow
-    Write-Host "=Coffee, " -NoNewline -ForegroundColor Gray
-    Write-Host "G" -NoNewline -ForegroundColor Yellow
-    Write-Host "=GitHub, " -NoNewline -ForegroundColor Gray
-    Write-Host "L" -NoNewline -ForegroundColor Yellow
-    Write-Host "=LinkedIn, or any other key to exit." -ForegroundColor Gray
+        $key = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+        $pressed = $key.Character.ToString()
 
-    $key = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-    $pressed = $key.Character.ToString()
-
-    if ($keyActions.ContainsKey($pressed)) {
-        Start-Process $keyActions[$pressed]
+        if ($keyActions.ContainsKey($pressed) -and $keyActions[$pressed]) {
+            $url = $keyActions[$pressed]
+            Start-Process $url
+            if (-not $isSFX) { Clear-Host; Write-Host "`n Thank you for using Universal Intel Wi-Fi and Bluetooth Drivers Updater!`n" -ForegroundColor Cyan }
+            exit
+        } else {
+            if (-not $isSFX) { Clear-Host; Write-Host "`n Thank you for using Universal Intel Wi-Fi and Bluetooth Drivers Updater!`n" -ForegroundColor Cyan }
+            exit
+        }
     }
-
-    if (-not $isSFX) {
-        Clear-Host
-        Write-Host "`n Thank you for using Universal Intel Wi-Fi and Bluetooth Drivers Updater!`n" -ForegroundColor Cyan
-    }
-    exit
 }
 
 # =============================================
