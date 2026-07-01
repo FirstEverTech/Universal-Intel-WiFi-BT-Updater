@@ -20,8 +20,8 @@
 <a id="top"></a>
 # 📡 **Universal Intel Wi-Fi and Bluetooth Drivers Updater**
 
-[![Version](https://img.shields.io/badge/Version-2026.06.0007-red?style=flat-square)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases)[![Windows](https://img.shields.io/badge/Windows-10%2F11-blue?style=flat-square&color=blueviolet)](https://www.microsoft.com/windows)[![PowerShell](https://img.shields.io/badge/PowerShell-5.0+-blueviolet?style=flat-square)](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5)[![DotNET](https://img.shields.io/badge/.NET-4.7.2+-blueviolet?style=flat-square)](https://dotnet.microsoft.com/en-us/download/dotnet-framework)[![Downloads](https://img.shields.io/github/downloads/FirstEverTech/Universal-Intel-WiFi-BT-Updater/total?style=flat-square&color=gold&label=Downloads)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases)[![GitHub Stars](https://img.shields.io/github/stars/FirstEverTech/Universal-Intel-WiFi-BT-Updater?style=flat-square&color=gold&label=Stars)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater)  
-[![License](https://img.shields.io/badge/License-MIT-0056b3?style=flat-square)](LICENSE)[![PS Gallery Version](https://img.shields.io/powershellgallery/v/universal-intel-wifi-bt-driver-updater?style=flat-square&label=PowerShell+Gallery)](https://www.powershellgallery.com/packages/universal-intel-wifi-bt-driver-updater)[![AI_Audits](https://img.shields.io/badge/AI_Audits_Score-9.69%2F10-0a8f08?style=flat-square)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/AI_AUDITS.md)[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F92-008631?style=flat-square)](https://www.virustotal.com/gui/url/e6d1c31b18eea15e1b9a72ffbf3170522357972fed0fefe5425c86d9f4c64594?nocache=1)[![Issues](https://img.shields.io/github/issues/FirstEverTech/Universal-Intel-WiFi-BT-Updater?style=flat-square&label=Issues)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/issues)
+[![Version](https://img.shields.io/badge/Version-2026.07.0008-red?style=flat-square)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases)[![Windows](https://img.shields.io/badge/Windows-10%2F11-blue?style=flat-square&color=blueviolet)](https://www.microsoft.com/windows)[![PowerShell](https://img.shields.io/badge/PowerShell-5.0+-blueviolet?style=flat-square)](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5)[![DotNET](https://img.shields.io/badge/.NET-4.7.2+-blueviolet?style=flat-square)](https://dotnet.microsoft.com/en-us/download/dotnet-framework)[![Downloads](https://img.shields.io/github/downloads/FirstEverTech/Universal-Intel-WiFi-BT-Updater/total?style=flat-square&color=gold&label=Downloads)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases)[![GitHub Stars](https://img.shields.io/github/stars/FirstEverTech/Universal-Intel-WiFi-BT-Updater?style=flat-square&color=gold&label=Stars)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater)  
+[![License](https://img.shields.io/badge/License-MIT-0056b3?style=flat-square)](LICENSE)[![PS Gallery Version](https://img.shields.io/powershellgallery/v/universal-intel-wifi-bt-driver-updater?style=flat-square&label=PowerShell+Gallery)](https://www.powershellgallery.com/packages/universal-intel-wifi-bt-driver-updater)[![AI_Audits](https://img.shields.io/badge/AI_Audits_Score-9.69%2F10-0a8f08?style=flat-square)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/AI_AUDITS.md)[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F92-008631?style=flat-square)](https://www.virustotal.com/gui/url/60b174100e60f9c1db8063740a0708479d85bb1dcdcdbb2e51bb1cfc1c000402?nocache=1)[![Issues](https://img.shields.io/github/issues/FirstEverTech/Universal-Intel-WiFi-BT-Updater?style=flat-square&label=Issues)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/issues)
 
 <a href="https://github.com/FirstEverTech">
   <img width="600" alt="" title="Universal Intel Wi-Fi and Bluetooth Drivers Updater"
@@ -173,6 +173,33 @@ If this project helped you, please click the "Star" button at the top of this pa
 <a id="latest-version"></a>
 ### 2.1 Latest Version
 
+**v2026.07.0008** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.07.0008)
+
+### 🆕 **Highlights**
+- **Configurable Credits Screen** — The credits screen is now fully dynamic and loaded from external files: `intel-wifi-bt-credits.txt` (content) and `intel-wifi-bt-ads.txt` (promotional links). This allows easy customization of support links and career opportunities without modifying the core script. Falls back to `intel-wifi-bt-message.txt` for backward compatibility.
+- **Improved Signature Verification** — Enhanced digital signature validation to support all Microsoft WHCP certificate variants used over the years, ensuring compatibility with older driver CAB packages while maintaining strict security standards.
+- **Code Cleanup** — All comments have been converted to English for better maintainability and consistency.
+
+### 🔧 **Technical Improvements**
+- **Credits Screen**: External configuration via `intel-wifi-bt-credits.txt` and `intel-wifi-bt-ads.txt`
+- **Backward Compatibility**: Falls back to `intel-wifi-bt-message.txt` if new files are missing
+- **Interactive Keys**: Support keys 1-5 (Patreon, PayPal, Coffee, Ko-Fi, GitHub) and A-E (promotional links)
+
+### 🐛 **Bug Fixes**
+- None in this release — this is a maintenance and enhancement release.
+
+### 🔧 **Compatibility**
+- Fully backward compatible with all existing databases and CAB files.
+- No changes to detection logic, hash verification, or driver installation.
+
+---
+
+[↑ Back to top](#top)
+
+<a id="previous-releases"></a>
+### 2.2 Previous Releases
+
+
 **v2026.06.0007** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.06.0007)
 
 ### 🆕 **Highlights**
@@ -190,35 +217,13 @@ If this project helped you, please click the "Star" button at the top of this pa
 
 [↑ Back to top](#top)
 
-<a id="previous-releases"></a>
-### 2.2 Previous Releases
-
-**v2026.06.0006** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.06.0006)
-
-### 🆕 **Highlights**
-- **New Hardware Support** — Added full support for Intel Bluetooth PCI Enumerator devices (`PCI\VEN_8086&DEV_A876`, `4D76`, `E476`, `E376`), also known as Intel(R) Bluetooth(R) PCI Enumerator
-- **Unified Driver Management** — The updater now detects both USB Bluetooth (via `VID_8087&PID_xxxx`) and PCI Bluetooth (via `VEN_8086&DEV_xxxx`) and fetches the appropriate CAB package
-- **Shared PCI CAB** — All PCI devices share a single CAB file (`intel-bt-<version>_pci.cab`), greatly reducing download size and simplifying maintenance
-- **Updated Banner** — New tool version, revised author line, removed redundant GitHub link, improved layout
-- **Code Cleanup** — All comments are now in English, version bumped to `2026.06.0006`
-
-### 🐛 **Bug Fixes**
-- **Missing PID `0043`** — Intel AX211 USB Bluetooth (PID `0043`) was absent from the supported device list; affected users received no update offer despite the driver being present in the database
-- **False Legacy flag for PCI Bluetooth** — PCI devices such as `DEV_A876/4D76/E476/E376` were incorrectly shown as `[LEGACY]` when the USB Bluetooth version was newer; PCI and USB now use independent version tracks
-- **Scanner dead code (v4.5)** — PCI legacy fallback in `BT-Platform-Scanner` was unreachable; known PCI DEVs absent from the current leak file now correctly fall back to the last known version from the previous MD
-
-### 🔧 **Compatibility**
-- Fully backward compatible with older `intel-bt-driver-latest.md` that only contains USB devices
-- Existing USB Bluetooth devices continue to work without any changes
-
----
-
-[↑ Back to top](#top)
-
 <a id="older-releases"></a>
 ### 2.3 Older Releases
 
-**v2026.03.0003** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.03.0003)
+**v2026.06.0006** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.06.0006)
+**v2026.04.0005** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.04.0005)
+**v2026.06.0006** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.06.0006)
+**v2026.04.0005** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.04.0005)
 **v2026.03.0002** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.03.0002)
 **v2025.11.0001 (old v2025.11)** → [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v24.0-2025.11)
 
