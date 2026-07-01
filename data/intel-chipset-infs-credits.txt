@@ -1,0 +1,54 @@
+[Cyan]
+[Cyan] SUPPORT DEVELOPMENT
+[Cyan] ===================
+
+ Universal Intel Chipset Device Updater provides automated hardware
+ detection and Intel INF deployment for thousands of Intel platforms,
+ including many systems no longer actively maintained by OEM vendors.
+
+ The hardware ID database is continuously updated to ensure accurate
+ device recognition across both legacy and modern Windows installations.
+
+ If this tool saved you time, improved device identification, or helped
+ keep older hardware updated, please consider supporting development.
+
+[Cyan]
+[Cyan] SUPPORTERS
+[Cyan] ==========
+
+ If you are a company or IT organization using this tool in production
+ environments, you can support development and optionally have your
+ company listed in this section as a supporter.
+
+ This can include:
+ - Company name mention in in-app credits section
+ - Optional listing in GitHub README (Sponsors section)
+ - Optional acknowledgment in GitHub release notes
+
+[Green] - Support Patreon:[Yellow] tinyurl.com/fet-patron[Gray] - press [Black,Gray][1][Gray,Black] key
+[Green] - Support PayPal: [Yellow] tinyurl.com/fet-paypal[Gray] - press [Black,Gray][2][Gray,Black] key
+[Green] - Support Coffee: [Yellow] tinyurl.com/fet-coffee[Gray] - press [Black,Gray][3][Gray,Black] key
+[Green] - Support Ko-Fi:  [Yellow] tinyurl.com/fet-mykofi[Gray] - press [Black,Gray][4][Gray,Black] key
+[Green] - Support GitHub: [Yellow] tinyurl.com/fet-github[Gray] - press [Black,Gray][5][Gray,Black] key
+
+[Cyan]
+[Cyan] PROJECT IMPACT
+[Cyan] ==============
+
+[Green] - 67,000+ downloads worldwide
+[Green] - 100,000+ Intel hardware IDs supported
+[Green] - Open-source and free to use
+[Green] - Continuously maintained INF database
+
+[Cyan]
+[Cyan] CAREER OPPORTUNITY
+[Cyan] ==================
+
+ I specialize in Windows deployment, driver automation, hardware
+ compatibility, infrastructure analysis, and custom IT tooling.
+
+ If your organization faces automation, deployment, device management,
+ or unsupported hardware environments, let's discuss how I can help.
+
+[Green] - Business Contact:[Yellow] firstever.tech/contact[Gray] - press [Black,Gray][F][Gray,Black] key
+[Green] - LinkedIn Profile:[Yellow] tinyurl.com/fet-linked[Gray] - press [Black,Gray][L][Gray,Black] key
