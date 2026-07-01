@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2026.07.0008] - 2026-07-01
+
+### Added
+- **Configurable Credits Screen** — The credits screen is now fully dynamic and loaded from external files: `intel-wifi-bt-credits.txt` (content) and `intel-wifi-bt-ads.txt` (promotional links). This allows easy customization of support links and career opportunities without modifying the core script. Falls back to `intel-wifi-bt-message.txt` for backward compatibility.
+- **Interactive Key Support** — Keys 1-5 (Patreon, PayPal, Coffee, Ko-Fi, GitHub) and A-E (promotional links) now open configured URLs from external files.
+
+### Changed
+- **Code Cleanup** — All comments have been converted to English for better maintainability and consistency.
+
+### Improved
+- **Signature Verification** — Enhanced digital signature validation to support all Microsoft WHCP certificate variants used over the years, ensuring compatibility with older driver CAB packages while maintaining strict security standards.
+
+### Compatibility
+- Fully backward compatible with all existing databases and CAB files.
+- No changes to detection logic, hash verification, or driver installation.
+
+Full details: [Release Notes](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases/tag/v2026.07.0008)
+
+---
+
 ## [2026.06.0007] - 2026-06-11
 
 ### Added
