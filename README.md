@@ -75,8 +75,11 @@ If this project helped you, please click the "Star" button at the top of this pa
 ![Star History](assets/stars-graph.svg)
 
 ## 🌐 Community & Distribution
-- Official threads on forums: **[Win-Raid](https://winraid.level1techs.com/t/tool-universal-intel-wifi-bluetooth-drivers-updater/112495)**, **[Station-Drivers](https://www.station-drivers.com/index.php/en/forum/intel-wireless-bluetooth-drivers/971-universal-intel-wi-fi-and-bluetooth-drivers-updater)**, **[TechPowerUp](https://www.techpowerup.com/forums/threads/tool-universal-intel-wi-fi-and-bluetooth-drivers-updater.342724/#post-5671700)**, **[Guru3D](https://forums.guru3d.com/threads/universal-intel-wi-fi-and-bluetooth-drivers-updater-open-source.460883/)**, **[ElevenForum](https://www.elevenforum.com/t/universal-intel-chipset-device-updater.41790/)** and **[WinClub](https://winclub.pl/topic/50298-universal-intel-wi-fi-and-bluetooth-drivers-updater/)**.
-- For transparency and additional verification, the project is listed on: **[MajorGeeks](https://www.majorgeeks.com/files/details/intel_wi_fi_bluetooth_driver_updater.html)**<!--, **[Softpedia](https://www.softpedia.com/)**--> and **[Instalki](https://www.instalki.pl/download/programy/sterowniki/karty-sieciowe/intel-karty-sieciowe/universal-intel-wi-fi-and-bluetooth-drivers-updater/)**.
+- Official threads on forums:  
+🔗 **[TechPowerUp](https://www.techpowerup.com/forums/threads/tool-universal-intel-wi-fi-and-bluetooth-drivers-updater.342724/#post-5671700)**, **[Guru3D](https://forums.guru3d.com/threads/universal-intel-wi-fi-and-bluetooth-drivers-updater-open-source.460883/)**, **[WinClub](https://winclub.pl/topic/50298-universal-intel-wi-fi-and-bluetooth-drivers-updater/)**, **[ElevenForum](https://www.elevenforum.com/t/universal-intel-chipset-device-updater.41790/)**, **[Win-Raid](https://winraid.level1techs.com/t/tool-universal-intel-wifi-bluetooth-drivers-updater/112495)**, and **[Station-Drivers](https://www.station-drivers.com/index.php/en/forum/intel-wireless-bluetooth-drivers/971-universal-intel-wi-fi-and-bluetooth-drivers-updater)**.  
+
+- For transparency and additional verification, the project is listed on:  
+🔗 **[SourceForge](https://sourceforge.net/projects/universal-intel-wifi-bt)**, **[MajorGeeks](https://www.majorgeeks.com/files/details/intel_wi_fi_bluetooth_driver_updater.html)**<!--, **[Softpedia](https://www.softpedia.com/)**--> and **[Instalki](https://www.instalki.pl/download/programy/sterowniki/karty-sieciowe/intel-karty-sieciowe/universal-intel-wi-fi-and-bluetooth-drivers-updater/)**.
 
 ## 💼 Career Opportunity
 
