@@ -132,7 +132,8 @@ If this project helped you, please click the "Star" button at the top of this pa
 12. [**Download Options**](#download-options)  
    12.1 [Option 1: SFX Executable (Recommended)](#option-1-sfx-executable-recommended)  
    12.2 [Option 2: Script Direct](#option-2-script-direct)  
-   12.3 [Option 3: Source Code](#option-3-source-code)  
+   12.3 [Option 2: PowerShell Gallery](#option-3-powershell-gallery)  
+   12.4 [Option 4: Source Code](#option-3-source-code)  
 13. [**Project Structure**](#project-structure)  
 14. [**Release Structure**](#release-structure)  
    14.1 [Primary Files](#primary-files)  
@@ -511,6 +512,36 @@ universal-intel-wifi-bt-driver-updater
 ## 📥 **12. Download Options**
 <a id="option-1-sfx-executable-recommended"></a>
 ### 12.1 Option 1: SFX Executable (Recommended)
+- **File**: [`WiFi-BT-Updater-202x.xx.xxxx-Win10-Win11.exe`](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/releases)
+- **Features**: One-click execution, automatic extraction
+- **Security**: Self-verifying SHA-256 hash check on every run, Authenticode signature verification of downloaded Intel installer packages
+- **For**: Most users, easiest method
+<a id="option-2-script-bundle"></a>
+### 12.2 Option 2: Script Bundle
+- **File**: [`universal-intel-wifi-bt-driver-updater.ps1`](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/src/universal-intel-wifi-bt-driver-updater.ps1)
+- **File**: [`universal-intel-wifi-bt-driver-updater.bat`](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/src/universal-intel-wifi-bt-driver-updater.bat)
+- **Features**: Full control, modifiable code, transparency
+- **Security**: Self-verifying SHA-256 hash check on every run, Authenticode signature verification of downloaded Intel installer packages
+- **For**: Advanced users, administrators, customization
+<a id="option-3-powershell-gallery"></a>
+### 12.3 Option 3: PowerShell Gallery
+- **Method**: [`Install-Script -Name universal-intel-wifi-bt-driver-updater`](https://www.powershellgallery.com/packages/universal-intel-wifi-bt-driver-updater) - PowerShell command
+- **Features**: Versioned distribution via PSGallery, one-line install/update (`Update-Script`), no manual download or extraction, runs directly as an installed command
+- **Security**: Self-verifying SHA-256 hash check on every run, Authenticode signature verification of downloaded Intel installer packages
+- **For**: Advanced users, administrators
+<a id="option-4-source-code"></a>
+### 12.4 Option 4: Source Code
+- **Method**: `git clone` the repository
+- **Features**: Latest development version, full customization
+- **For**: Developers, contributors
+
+[↑ Back to top](#top)
+
+
+<a id="download-options"></a>
+## 📥 **12. Download Options**
+<a id="option-1-sfx-executable-recommended"></a>
+### 12.1 Option 1: SFX Executable (Recommended)
 - **File**: `WiFi-BT-Updater-2026.03.0003-Win10-Win11.exe`
 - **Features**: Digital signature, one-click execution, automatic extraction and elevation
 - **For**: Most users — easiest method, no separate PowerShell step required
@@ -537,6 +568,7 @@ universal-intel-wifi-bt-driver-updater
 - [get-intel-hwids.bat](src/get-intel-hwids.bat) - Intel Wi-Fi & BT HWIDs Detection Tool Batch launcher
 - [get-intel-hwids.ps1](src/get-intel-hwids.ps1) - Intel Wi-Fi & BT HWIDs Detection Tool PowerShell script
 - [universal-intel-wifi-bt-driver-updater.ps1](src/universal-intel-wifi-bt-driver-updater.ps1) - Main PowerShell script
+- [
 - [universal-intel-wifi-bt-driver-updater.ver](src/universal-intel-wifi-bt-driver-updater.ver) - Main version file
 
 `data/` - Data files
