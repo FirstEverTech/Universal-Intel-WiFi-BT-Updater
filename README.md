@@ -567,8 +567,8 @@ universal-intel-wifi-bt-driver-updater
 `src/` - Main scripts directory
 - [get-intel-hwids.bat](src/get-intel-hwids.bat) - Intel Wi-Fi & BT HWIDs Detection Tool Batch launcher
 - [get-intel-hwids.ps1](src/get-intel-hwids.ps1) - Intel Wi-Fi & BT HWIDs Detection Tool PowerShell script
+- [universal-intel-wifi-bt-driver-updater.ps1](src/universal-intel-wifi-bt-driver-updater.bat) - Main PowerShell Batch launcher
 - [universal-intel-wifi-bt-driver-updater.ps1](src/universal-intel-wifi-bt-driver-updater.ps1) - Main PowerShell script
-- [
 - [universal-intel-wifi-bt-driver-updater.ver](src/universal-intel-wifi-bt-driver-updater.ver) - Main version file
 
 `data/` - Data files
