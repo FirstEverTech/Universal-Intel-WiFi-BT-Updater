@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, sys, math, requests, numpy as np, matplotlib
+import os, sys, math, time, requests, numpy as np, matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
@@ -11,21 +11,33 @@ TOKEN   = os.environ.get("GITHUB_TOKEN")
 HEADERS = {
     "Accept": "application/vnd.github.v3.star+json",
     "Authorization": f"Bearer {TOKEN}",
+    "User-Agent": "FirstEverTech-stars-graph",
 }
 
 def fetch_stars(repo):
     dates, page = [], 1
     while True:
-        r = requests.get(
-            f"https://api.github.com/repos/{repo}/stargazers",
-            headers=HEADERS, params={"per_page": 100, "page": page}, timeout=30,
-        )
-        r.raise_for_status()
+        for attempt in range(5):
+            r = requests.get(
+                f"https://api.github.com/repos/{repo}/stargazers",
+                headers=HEADERS, params={"per_page": 100, "page": page}, timeout=30,
+            )
+            if r.status_code == 403 and "rate limit" in r.text.lower():
+                wait = int(r.headers.get("Retry-After", 30))
+                print(f"[WARN] secondary rate limit, waiting {wait}s (attempt {attempt+1}/5)", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            r.raise_for_status()
+            break
+        else:
+            raise RuntimeError(f"Failed to fetch page {page} after retries")
+
         data = r.json()
         if not data:
             break
         dates += [datetime.fromisoformat(i["starred_at"].rstrip("Z")) for i in data]
         page += 1
+        time.sleep(0.5)   # throttle między stronami, żeby nie triggerować WAF
     return sorted(dates)
 
 # ---------- COLORS ----------
@@ -73,7 +85,6 @@ def generate(dates, repo, out):
     x_end   = now
 
     # --- PRZEDŁUŻENIE DANYCH O DZISIEJSZĄ DATĘ ---
-    # Jeśli ostatnia gwiazdka jest wcześniej niż dziś, dodajemy punkt (now, ostatnia wartość)
     if dates[-1] < now:
         extended_dates = dates + [now]
         extended_counts = counts + [counts[-1]]
@@ -85,24 +96,19 @@ def generate(dates, repo, out):
     fig.patch.set_facecolor("none")
     ax.set_facecolor("none")
 
-    # Linia + wypełnienie na rozszerzonych danych (dochodzą do dziś)
     ax.plot(extended_dates, extended_counts, color=LINE, linewidth=2.5, zorder=3)
     ax.fill_between(extended_dates, extended_counts, color=LINE, alpha=0.15, zorder=2)
 
-    # 31 równomiernie rozmieszczonych kropek – interpolacja na rozszerzonych danych
-    # Dzięki temu ostatnia kropka wypadnie dokładnie na 'now'
     x31 = np.linspace(mdates.date2num(x_start), mdates.date2num(x_end), 31)
     date_nums_ext = mdates.date2num(extended_dates)
     y31 = np.interp(x31, date_nums_ext, extended_counts)
     ax.scatter(mdates.num2date(x31), y31, color=BLUE, s=30, zorder=4, linewidths=0)
 
-    # ---------- MARGINS TO PREVENT DOTS FROM BEING CUT OFF ----------
     x_pad = (x_end - x_start) * 0.02
     ax.set_xlim(x_start - x_pad, x_end + x_pad)
 
-    # Y axis: 8 lines, 0 at bottom, nice max at top, plus half a step above
     NUM_Y_LINES = 8
-    y_max = max(counts)  # używamy rzeczywistego maksimum (nie rozszerzonego – to samo)
+    y_max = max(counts)
     step = math.ceil(y_max / (NUM_Y_LINES - 1)) if y_max > 0 else 1
     nice_max = step * (NUM_Y_LINES - 1)
     if nice_max < NUM_Y_LINES - 1:
@@ -111,7 +117,6 @@ def generate(dates, repo, out):
     ax.set_ylim(0, nice_max + step * 0.5)
     ax.set_yticks(np.linspace(0, nice_max, NUM_Y_LINES))
 
-    # ---------- GRID ----------
     ax.set_axisbelow(True)
     loc, fmt, x_lbl = x_axis_config(x_start, x_end)
     ax.xaxis.set_major_locator(loc)
