@@ -27,6 +27,12 @@ def fetch_stars(repo):
                 print(f"[WARN] secondary rate limit, waiting {wait}s (attempt {attempt+1}/5)", file=sys.stderr)
                 time.sleep(wait)
                 continue
+            if r.status_code != 200:
+                print(f"[DEBUG] status={r.status_code}", file=sys.stderr)
+                print(f"[DEBUG] body={r.text}", file=sys.stderr)
+                print(f"[DEBUG] x-ratelimit-remaining={r.headers.get('x-ratelimit-remaining')}", file=sys.stderr)
+                print(f"[DEBUG] x-ratelimit-reset={r.headers.get('x-ratelimit-reset')}", file=sys.stderr)
+                print(f"[DEBUG] x-github-request-id={r.headers.get('x-github-request-id')}", file=sys.stderr)
             r.raise_for_status()
             break
         else:
