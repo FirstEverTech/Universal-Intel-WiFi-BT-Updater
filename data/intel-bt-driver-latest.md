@@ -1,15 +1,15 @@
 # Intel Wireless Bluetooth Drivers Latest
 
-Latest Version = 24.40.11.1  
+Latest Version = 24.60.0.4  
 Release Date = 02/07/2026
 
 ## Supported USB Devices
 
 | PID  | Chipset         | Generation      | Bluetooth | Latest Version | Release Date |
 |------|-----------------|-----------------|-----------|----------------|--------------|
-| 0038 | BE200 stepping  | Wi-Fi 7         | 5.4       | 24.50.1.3      | 08/06/2026   |
-| 0037 | BE202 / BE204   | Wi-Fi 7         | 5.4       | 24.50.0.4      | 08/05/2026   |
-| 0036 | BE200           | Wi-Fi 7         | 5.4       | 24.50.1.3      | 08/06/2026   |
+| 0038 | BE200 stepping  | Wi-Fi 7         | 5.4       | 24.60.0.4      | 02/07/2026   |
+| 0037 | BE202 / BE204   | Wi-Fi 7         | 5.4       | 24.60.0.4      | 02/07/2026   |
+| 0036 | BE200           | Wi-Fi 7         | 5.4       | 24.60.0.4      | 02/07/2026   |
 | 0033 | AX211           | Wi-Fi 6E (CNVi) | 5.3       | 24.40.11.1     | 02/07/2026   |
 | 0043 | AX211           | Wi-Fi 6E (CNVi) | 5.3       | 24.40.11.1     | 02/07/2026   |
 | 0032 | AX210           | Wi-Fi 6E        | 5.3       | 24.40.11.1     | 02/07/2026   |
