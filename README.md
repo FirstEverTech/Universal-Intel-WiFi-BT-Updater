@@ -38,7 +38,7 @@ Intel distributes Wi-Fi and Bluetooth drivers as large CAB packages — but your
 
 ---
 
-[![Wi--Fi Latest](https://img.shields.io/badge/Wi--Fi_Latest-v24.60.0.3-blue?style=flat-square)](https://www.intel.com/content/www/us/en/search.html#q=wi-fi)[![Wi--Fi Database](https://img.shields.io/badge/Wi--Fi_Database-11.06.2026-blue?style=flat-square)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-wifi-driver-latest.md)[![BT Latest](https://img.shields.io/badge/BT_Latest-v24.50.1.3-blue?style=flat-square)](https://www.intel.com/content/www/us/en/search.html#q=bluetooth)[![BT Database](https://img.shields.io/badge/BT_Database-08.06.2026-blue?style=flat-square)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-bt-driver-latest.md)
+[![Wi--Fi Latest](https://img.shields.io/badge/Wi--Fi_Latest-v24.60.0.3-blue?style=flat-square)](https://www.intel.com/content/www/us/en/search.html#q=wi-fi)[![Wi--Fi Database](https://img.shields.io/badge/Wi--Fi_Database-11.06.2026-blue?style=flat-square)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-wifi-driver-latest.md)[![BT Latest](https://img.shields.io/badge/BT_Latest-v24.60.0.4-blue?style=flat-square)](https://www.intel.com/content/www/us/en/search.html#q=bluetooth)[![BT Database](https://img.shields.io/badge/BT_Database-02.07.2026-blue?style=flat-square)](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/data/intel-bt-driver-latest.md)
 
 For detailed documentation and guides, see:  
 → **[Deploying Universal Intel Wi-Fi and BT Drivers Updater via MDM](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater/blob/main/docs/MDM-DEPLOYMENT-GUIDE_EN_2026.md)**  
