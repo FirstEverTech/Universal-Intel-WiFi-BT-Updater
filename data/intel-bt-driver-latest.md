@@ -22,10 +22,14 @@ Release Date = 28/10/2026
 
 | DEV  | Chipset         | Generation      | Bluetooth | Latest Version | Release Date |
 |------|-----------------|-----------------|-----------|----------------|--------------|
-| E376 | BE202 / BE204   | Wi-Fi 7         | 5.4       | 24.80.0.2      | 01/09/2026   |
-| E476 | AX210 / BE200   | Wi-Fi 6E/7      | 5.3/5.4   | 24.80.0.2      | 01/09/2026   |
-| 4D76 | AX211           | Wi-Fi 6E (CNVi) | 5.3       | 24.80.0.2      | 01/09/2026   |
-| A876 | AX200 / AX201   | Wi-Fi 6/CNVi    | 5.2       | 24.80.0.2      | 01/09/2026   |
+| E376 | BE202 / BE204   | Wi-Fi 7         | 5.4       | 24.90.0.3      | 28/10/2026   |
+| E476 | AX210 / BE200   | Wi-Fi 6E/7      | 5.3/5.4   | 24.90.0.3      | 28/10/2026   |
+| 4D76 | AX211           | Wi-Fi 6E (CNVi) | 5.3       | 24.90.0.3      | 28/10/2026   |
+| A876 | AX200 / AX201   | Wi-Fi 6/CNVi    | 5.2       | 24.90.0.3      | 28/10/2026   |
+| 6E74 | Unknown         | Unknown         | ??        | 24.90.0.3      | 28/10/2026   |
+
+<!-- NEW PCI DEVs - ADD METADATA TO SCRIPT -->
+<!-- DEV 6E74 -->
 
 
 ## Explanatory Notes
@@ -48,4 +52,4 @@ If you believe a Bluetooth version is incorrect based on your HCI/LMP values, pl
 
 **Source:** [Universal Intel Wi-Fi & Bluetooth Drivers Updater](https://github.com/FirstEverTech/Universal-Intel-WiFi-BT-Updater)
 **Project by:** [Marcin Grygiel](https://www.linkedin.com/in/marcin-grygiel/)
-**Last Update:** 06-11-2026
+**Last Update:** 17-11-2026
